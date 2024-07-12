@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "DS Website",
+    "section": "",
+    "text": "안녕하세요, 데이터 분석 안상후입니다.\n\n넘파이를 사용해서 벡터 만들기\n\n\nimport numpy as np\nnp.array([1, 2, 3, 4, 5])\n\narray([1, 2, 3, 4, 5])"
+  },
+  {
+    "objectID": "index.html#홈페이지-첫-화면입니다",
+    "href": "index.html#홈페이지-첫-화면입니다",
+    "title": "DS Website",
+    "section": "",
+    "text": "안녕하세요, 데이터 분석 안상후입니다.\n\n넘파이를 사용해서 벡터 만들기\n\n\nimport numpy as np\nnp.array([1, 2, 3, 4, 5])\n\narray([1, 2, 3, 4, 5])"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n2"
+  }
+]
