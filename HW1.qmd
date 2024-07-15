@@ -1,0 +1,74 @@
+---
+title: "HW1"
+jupyter: python3
+---
+
+**다음 표의 내용을 데이터 프레임으로 만들어 출력해 보세요. (p.85)**
+
+```{python}
+import pandas as pd
+df=pd.DataFrame({
+    '제품':['사과','딸기','수박'],
+    '가격':[1800,1500,3000],
+    '판매량':[24,38,13]
+})
+print(df)
+```
+
+
+**mpg데이터 변수명 변경 (p.115)**
+
+```{python}
+mpg=pd.read_csv('data/mpg.csv')
+mpg_new=mpg.copy()
+mpg_new=mpg_new.rename(columns={'cty':'city'})
+mpg_new=mpg_new.rename(columns={'hwy':'highway'})
+print(mpg_new)
+```
+
+
+**midway.csv를 불러와 데이터의 특징을 파악하세요. (p.130)**
+
+```{python}
+mdw=pd.read_csv('data/midwest.csv')
+mdw.describe()
+```
+
+
+**poptotal(전체 인구) 변수를 total로, popasian(아시아 인구) 변수를 asian으로 수정하세요.**
+
+```{python}
+mdw=mdw.rename(columns={'poptotal':'total'})
+mdw=mdw.rename(columns={'popasian':'asian'})
+print(mdw[['total','asian']])
+```
+
+**total,asian 변수를 이용해 '전체 인구 대비 아시아 인구 백분율' 파생변수를 추가하고, 히스토그램을 만들어 분포를 살펴보세요.**
+
+```{python}
+import matplotlib.pyplot as plt
+mdw['per_asian']=mdw['asian']/mdw['total']*100
+print(mdw)
+mdw['per_asian'].hist()
+plt.show()
+```
+
+**아시아 인구 백분율 전체 평균을 구하고, 평균을 초과하면 'Large', 그 외에는 'Small'을 부여한 파생변수를 만들어 보세요.**
+
+```{python}
+import numpy as np
+avg_asian=mdw['per_asian'].mean()
+mdw['amo_asian']=np.where((mdw['per_asian']>avg_asian),'Large','Small')
+print(mdw)
+```
+
+**'Large'와 'Small'에 해당하는 지역이 얼마나 많은지 빈도표와 빈도 막대 그래프를 만들어 확인해 보세요.**
+
+```{python}
+plt.clf()
+asian_counts=mdw['amo_asian'].value_counts()
+print(asian_counts)
+asian_counts.plot.bar(rot=0)
+plt.show()
+```
+

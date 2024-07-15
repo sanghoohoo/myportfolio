@@ -19,5 +19,12 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n2"
+  },
+  {
+    "objectID": "HW1.html",
+    "href": "HW1.html",
+    "title": "HW1",
+    "section": "",
+    "text": "다음 표의 내용을 데이터 프레임으로 만들어 출력해 보세요\n\n1 + 1\n\n2"
   }
 ]
