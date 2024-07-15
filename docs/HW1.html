@@ -57,7 +57,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -100,6 +100,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
 
 
 <link rel="stylesheet" href="styles.css">
@@ -170,11 +176,467 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p><strong>다음 표의 내용을 데이터 프레임으로 만들어 출력해 보세요</strong></p>
-<div id="c42dc50c" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="op">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="1">
-<pre><code>2</code></pre>
+<p><strong>다음 표의 내용을 데이터 프레임으로 만들어 출력해 보세요. (p.85)</strong></p>
+<div id="9f07cceb" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df<span class="op">=</span>pd.DataFrame({</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'제품'</span>:[<span class="st">'사과'</span>,<span class="st">'딸기'</span>,<span class="st">'수박'</span>],</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'가격'</span>:[<span class="dv">1800</span>,<span class="dv">1500</span>,<span class="dv">3000</span>],</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'판매량'</span>:[<span class="dv">24</span>,<span class="dv">38</span>,<span class="dv">13</span>]</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   제품    가격  판매량
+0  사과  1800   24
+1  딸기  1500   38
+2  수박  3000   13</code></pre>
+</div>
+</div>
+<p><strong>mpg데이터 변수명 변경 (p.115)</strong></p>
+<div id="59b0bceb" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>mpg<span class="op">=</span>pd.read_csv(<span class="st">'data/mpg.csv'</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>mpg_new<span class="op">=</span>mpg.copy()</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>mpg_new<span class="op">=</span>mpg_new.rename(columns<span class="op">=</span>{<span class="st">'cty'</span>:<span class="st">'city'</span>})</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>mpg_new<span class="op">=</span>mpg_new.rename(columns<span class="op">=</span>{<span class="st">'hwy'</span>:<span class="st">'highway'</span>})</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mpg_new)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    manufacturer   model  displ  year  cyl       trans drv  city  highway fl  \
+0           audi      a4    1.8  1999    4    auto(l5)   f    18       29  p   
+1           audi      a4    1.8  1999    4  manual(m5)   f    21       29  p   
+2           audi      a4    2.0  2008    4  manual(m6)   f    20       31  p   
+3           audi      a4    2.0  2008    4    auto(av)   f    21       30  p   
+4           audi      a4    2.8  1999    6    auto(l5)   f    16       26  p   
+..           ...     ...    ...   ...  ...         ...  ..   ...      ... ..   
+229   volkswagen  passat    2.0  2008    4    auto(s6)   f    19       28  p   
+230   volkswagen  passat    2.0  2008    4  manual(m6)   f    21       29  p   
+231   volkswagen  passat    2.8  1999    6    auto(l5)   f    16       26  p   
+232   volkswagen  passat    2.8  1999    6  manual(m5)   f    18       26  p   
+233   volkswagen  passat    3.6  2008    6    auto(s6)   f    17       26  p   
+
+    category  
+0    compact  
+1    compact  
+2    compact  
+3    compact  
+4    compact  
+..       ...  
+229  midsize  
+230  midsize  
+231  midsize  
+232  midsize  
+233  midsize  
+
+[234 rows x 11 columns]</code></pre>
+</div>
+</div>
+<p><strong>midway.csv를 불러와 데이터의 특징을 파악하세요. (p.130)</strong></p>
+<div id="d144789b" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>mdw<span class="op">=</span>pd.read_csv(<span class="st">'data/midwest.csv'</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>mdw.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">PID</th>
+<th data-quarto-table-cell-role="th">area</th>
+<th data-quarto-table-cell-role="th">poptotal</th>
+<th data-quarto-table-cell-role="th">popdensity</th>
+<th data-quarto-table-cell-role="th">popwhite</th>
+<th data-quarto-table-cell-role="th">popblack</th>
+<th data-quarto-table-cell-role="th">popamerindian</th>
+<th data-quarto-table-cell-role="th">popasian</th>
+<th data-quarto-table-cell-role="th">popother</th>
+<th data-quarto-table-cell-role="th">percwhite</th>
+<th data-quarto-table-cell-role="th">...</th>
+<th data-quarto-table-cell-role="th">perchsd</th>
+<th data-quarto-table-cell-role="th">percollege</th>
+<th data-quarto-table-cell-role="th">percprof</th>
+<th data-quarto-table-cell-role="th">poppovertyknown</th>
+<th data-quarto-table-cell-role="th">percpovertyknown</th>
+<th data-quarto-table-cell-role="th">percbelowpoverty</th>
+<th data-quarto-table-cell-role="th">percchildbelowpovert</th>
+<th data-quarto-table-cell-role="th">percadultpoverty</th>
+<th data-quarto-table-cell-role="th">percelderlypoverty</th>
+<th data-quarto-table-cell-role="th">inmetro</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">count</td>
+<td>437.000000</td>
+<td>437.000000</td>
+<td>4.370000e+02</td>
+<td>437.000000</td>
+<td>4.370000e+02</td>
+<td>4.370000e+02</td>
+<td>437.000000</td>
+<td>437.000000</td>
+<td>437.000000</td>
+<td>437.000000</td>
+<td>...</td>
+<td>437.000000</td>
+<td>437.000000</td>
+<td>437.000000</td>
+<td>4.370000e+02</td>
+<td>437.000000</td>
+<td>437.000000</td>
+<td>437.000000</td>
+<td>437.000000</td>
+<td>437.000000</td>
+<td>437.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">mean</td>
+<td>1437.338673</td>
+<td>0.033169</td>
+<td>9.613030e+04</td>
+<td>3097.742985</td>
+<td>8.183992e+04</td>
+<td>1.102388e+04</td>
+<td>343.109840</td>
+<td>1310.464531</td>
+<td>1612.931350</td>
+<td>95.558441</td>
+<td>...</td>
+<td>73.965546</td>
+<td>18.272736</td>
+<td>4.447259</td>
+<td>9.364228e+04</td>
+<td>97.110267</td>
+<td>12.510505</td>
+<td>16.447464</td>
+<td>10.918798</td>
+<td>11.389043</td>
+<td>0.343249</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">std</td>
+<td>876.390266</td>
+<td>0.014679</td>
+<td>2.981705e+05</td>
+<td>7664.751786</td>
+<td>2.001966e+05</td>
+<td>7.895827e+04</td>
+<td>868.926751</td>
+<td>9518.394189</td>
+<td>18526.540699</td>
+<td>7.087358</td>
+<td>...</td>
+<td>5.843177</td>
+<td>6.261908</td>
+<td>2.408427</td>
+<td>2.932351e+05</td>
+<td>2.749863</td>
+<td>5.150155</td>
+<td>7.228634</td>
+<td>5.109166</td>
+<td>3.661259</td>
+<td>0.475338</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">min</td>
+<td>561.000000</td>
+<td>0.005000</td>
+<td>1.701000e+03</td>
+<td>85.050000</td>
+<td>4.160000e+02</td>
+<td>0.000000e+00</td>
+<td>4.000000</td>
+<td>0.000000</td>
+<td>0.000000</td>
+<td>10.694087</td>
+<td>...</td>
+<td>46.912261</td>
+<td>7.336108</td>
+<td>0.520291</td>
+<td>1.696000e+03</td>
+<td>80.902441</td>
+<td>2.180168</td>
+<td>1.918955</td>
+<td>1.938504</td>
+<td>3.547067</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">25%</td>
+<td>670.000000</td>
+<td>0.024000</td>
+<td>1.884000e+04</td>
+<td>622.407407</td>
+<td>1.863000e+04</td>
+<td>2.900000e+01</td>
+<td>44.000000</td>
+<td>35.000000</td>
+<td>20.000000</td>
+<td>94.886032</td>
+<td>...</td>
+<td>71.325329</td>
+<td>14.113725</td>
+<td>2.997957</td>
+<td>1.836400e+04</td>
+<td>96.894572</td>
+<td>9.198715</td>
+<td>11.624088</td>
+<td>7.668009</td>
+<td>8.911763</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">50%</td>
+<td>1221.000000</td>
+<td>0.030000</td>
+<td>3.532400e+04</td>
+<td>1156.208330</td>
+<td>3.447100e+04</td>
+<td>2.010000e+02</td>
+<td>94.000000</td>
+<td>102.000000</td>
+<td>66.000000</td>
+<td>98.032742</td>
+<td>...</td>
+<td>74.246891</td>
+<td>16.797562</td>
+<td>3.814239</td>
+<td>3.378800e+04</td>
+<td>98.169562</td>
+<td>11.822313</td>
+<td>15.270164</td>
+<td>10.007610</td>
+<td>10.869119</td>
+<td>0.000000</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">75%</td>
+<td>2059.000000</td>
+<td>0.038000</td>
+<td>7.565100e+04</td>
+<td>2330.000000</td>
+<td>7.296800e+04</td>
+<td>1.291000e+03</td>
+<td>288.000000</td>
+<td>401.000000</td>
+<td>345.000000</td>
+<td>99.074935</td>
+<td>...</td>
+<td>77.195345</td>
+<td>20.549893</td>
+<td>4.949324</td>
+<td>7.284000e+04</td>
+<td>98.598636</td>
+<td>15.133226</td>
+<td>20.351878</td>
+<td>13.182182</td>
+<td>13.412162</td>
+<td>1.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">max</td>
+<td>3052.000000</td>
+<td>0.110000</td>
+<td>5.105067e+06</td>
+<td>88018.396600</td>
+<td>3.204947e+06</td>
+<td>1.317147e+06</td>
+<td>10289.000000</td>
+<td>188565.000000</td>
+<td>384119.000000</td>
+<td>99.822821</td>
+<td>...</td>
+<td>88.898674</td>
+<td>48.078510</td>
+<td>20.791321</td>
+<td>5.023523e+06</td>
+<td>99.860384</td>
+<td>48.691099</td>
+<td>64.308477</td>
+<td>43.312464</td>
+<td>31.161972</td>
+<td>1.000000</td>
+</tr>
+</tbody>
+</table>
+
+<p>8 rows × 25 columns</p>
+</div>
+</div>
+</div>
+<p><strong>poptotal(전체 인구) 변수를 total로, popasian(아시아 인구) 변수를 asian으로 수정하세요.</strong></p>
+<div id="4b456f79" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>mdw<span class="op">=</span>mdw.rename(columns<span class="op">=</span>{<span class="st">'poptotal'</span>:<span class="st">'total'</span>})</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>mdw<span class="op">=</span>mdw.rename(columns<span class="op">=</span>{<span class="st">'popasian'</span>:<span class="st">'asian'</span>})</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mdw[[<span class="st">'total'</span>,<span class="st">'asian'</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      total  asian
+0     66090    249
+1     10626     48
+2     14991     16
+3     30806    150
+4      5836      5
+..      ...    ...
+432  304715   2699
+433   46104     92
+434   19385     43
+435  140320   1728
+436   73605    722
+
+[437 rows x 2 columns]</code></pre>
+</div>
+</div>
+<p><strong>total,asian 변수를 이용해 ‘전체 인구 대비 아시아 인구 백분율’ 파생변수를 추가하고, 히스토그램을 만들어 분포를 살펴보세요.</strong></p>
+<div id="99139a60" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>mdw[<span class="st">'per_asian'</span>]<span class="op">=</span>mdw[<span class="st">'asian'</span>]<span class="op">/</span>mdw[<span class="st">'total'</span>]<span class="op">*</span><span class="dv">100</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mdw)</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>mdw[<span class="st">'per_asian'</span>].hist()</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      PID     county state   area   total   popdensity  popwhite  popblack  \
+0     561      ADAMS    IL  0.052   66090  1270.961540     63917      1702   
+1     562  ALEXANDER    IL  0.014   10626   759.000000      7054      3496   
+2     563       BOND    IL  0.022   14991   681.409091     14477       429   
+3     564      BOONE    IL  0.017   30806  1812.117650     29344       127   
+4     565      BROWN    IL  0.018    5836   324.222222      5264       547   
+..    ...        ...   ...    ...     ...          ...       ...       ...   
+432  3048   WAUKESHA    WI  0.034  304715  8962.205880    298313      1096   
+433  3049    WAUPACA    WI  0.045   46104  1024.533330     45695        22   
+434  3050   WAUSHARA    WI  0.037   19385   523.918919     19094        29   
+435  3051  WINNEBAGO    WI  0.035  140320  4009.142860    136822       697   
+436  3052       WOOD    WI  0.048   73605  1533.437500     72157        90   
+
+     popamerindian  asian  ...  percprof  poppovertyknown  percpovertyknown  \
+0               98    249  ...  4.355859            63628         96.274777   
+1               19     48  ...  2.870315            10529         99.087145   
+2               35     16  ...  4.488572            14235         94.956974   
+3               46    150  ...  4.197800            30337         98.477569   
+4               14      5  ...  3.367680             4815         82.505140   
+..             ...    ...  ...       ...              ...               ...   
+432            672   2699  ...  7.667090           299802         98.387674   
+433            125     92  ...  3.138596            44412         96.330036   
+434             70     43  ...  2.620907            19163         98.854785   
+435            685   1728  ...  5.659847           133950         95.460376   
+436            481    722  ...  4.583725            72685         98.750085   
+
+     percbelowpoverty  percchildbelowpovert  percadultpoverty  \
+0           13.151443             18.011717         11.009776   
+1           32.244278             45.826514         27.385647   
+2           12.068844             14.036061         10.852090   
+3            7.209019             11.179536          5.536013   
+4           13.520249             13.022889         11.143211   
+..                ...                   ...               ...   
+432          3.121060              3.785820          2.590061   
+433          8.488697             10.071411          6.953799   
+434         13.786985             20.050708         11.695784   
+435          8.804031             10.592031          8.660587   
+436          8.525831             11.162997          7.375656   
+
+     percelderlypoverty  inmetro  category  per_asian  
+0             12.443812        0       AAR   0.376759  
+1             25.228976        0       LHR   0.451722  
+2             12.697410        0       AAR   0.106731  
+3              6.217047        1       ALU   0.486918  
+4             19.200000        0       AAR   0.085675  
+..                  ...      ...       ...        ...  
+432            4.085479        1       HLU   0.885746  
+433           10.338641        0       AAR   0.199549  
+434           11.804558        0       AAR   0.221821  
+435            6.661094        1       HAU   1.231471  
+436            7.882918        0       AAR   0.980912  
+
+[437 rows x 29 columns]</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="HW1_files/figure-html/cell-6-output-2.png" width="575" height="411" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>아시아 인구 백분율 전체 평균을 구하고, 평균을 초과하면 ‘Large’, 그 외에는 ’Small’을 부여한 파생변수를 만들어 보세요.</strong></p>
+<div id="6b6b2c64" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>avg_asian<span class="op">=</span>mdw[<span class="st">'per_asian'</span>].mean()</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>mdw[<span class="st">'amo_asian'</span>]<span class="op">=</span>np.where((mdw[<span class="st">'per_asian'</span>]<span class="op">&gt;</span>avg_asian),<span class="st">'Large'</span>,<span class="st">'Small'</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mdw)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      PID     county state   area   total   popdensity  popwhite  popblack  \
+0     561      ADAMS    IL  0.052   66090  1270.961540     63917      1702   
+1     562  ALEXANDER    IL  0.014   10626   759.000000      7054      3496   
+2     563       BOND    IL  0.022   14991   681.409091     14477       429   
+3     564      BOONE    IL  0.017   30806  1812.117650     29344       127   
+4     565      BROWN    IL  0.018    5836   324.222222      5264       547   
+..    ...        ...   ...    ...     ...          ...       ...       ...   
+432  3048   WAUKESHA    WI  0.034  304715  8962.205880    298313      1096   
+433  3049    WAUPACA    WI  0.045   46104  1024.533330     45695        22   
+434  3050   WAUSHARA    WI  0.037   19385   523.918919     19094        29   
+435  3051  WINNEBAGO    WI  0.035  140320  4009.142860    136822       697   
+436  3052       WOOD    WI  0.048   73605  1533.437500     72157        90   
+
+     popamerindian  asian  ...  poppovertyknown  percpovertyknown  \
+0               98    249  ...            63628         96.274777   
+1               19     48  ...            10529         99.087145   
+2               35     16  ...            14235         94.956974   
+3               46    150  ...            30337         98.477569   
+4               14      5  ...             4815         82.505140   
+..             ...    ...  ...              ...               ...   
+432            672   2699  ...           299802         98.387674   
+433            125     92  ...            44412         96.330036   
+434             70     43  ...            19163         98.854785   
+435            685   1728  ...           133950         95.460376   
+436            481    722  ...            72685         98.750085   
+
+     percbelowpoverty  percchildbelowpovert  percadultpoverty  \
+0           13.151443             18.011717         11.009776   
+1           32.244278             45.826514         27.385647   
+2           12.068844             14.036061         10.852090   
+3            7.209019             11.179536          5.536013   
+4           13.520249             13.022889         11.143211   
+..                ...                   ...               ...   
+432          3.121060              3.785820          2.590061   
+433          8.488697             10.071411          6.953799   
+434         13.786985             20.050708         11.695784   
+435          8.804031             10.592031          8.660587   
+436          8.525831             11.162997          7.375656   
+
+     percelderlypoverty  inmetro  category  per_asian  amo_asian  
+0             12.443812        0       AAR   0.376759      Small  
+1             25.228976        0       LHR   0.451722      Small  
+2             12.697410        0       AAR   0.106731      Small  
+3              6.217047        1       ALU   0.486918      Small  
+4             19.200000        0       AAR   0.085675      Small  
+..                  ...      ...       ...        ...        ...  
+432            4.085479        1       HLU   0.885746      Large  
+433           10.338641        0       AAR   0.199549      Small  
+434           11.804558        0       AAR   0.221821      Small  
+435            6.661094        1       HAU   1.231471      Large  
+436            7.882918        0       AAR   0.980912      Large  
+
+[437 rows x 30 columns]</code></pre>
+</div>
+</div>
+<p><strong>’Large’와 ’Small’에 해당하는 지역이 얼마나 많은지 빈도표와 빈도 막대 그래프를 만들어 확인해 보세요.</strong></p>
+<div id="ad2ed31d" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>plt.clf()</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>asian_counts<span class="op">=</span>mdw[<span class="st">'amo_asian'</span>].value_counts()</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(asian_counts)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>asian_counts.plot.bar(rot<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>amo_asian
+Small    318
+Large    119
+Name: count, dtype: int64</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="HW1_files/figure-html/cell-8-output-2.png" width="575" height="429" class="figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 
