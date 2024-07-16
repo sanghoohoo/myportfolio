@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Sanghoo Ahn"
 toc: false
 about:
     id: hero-heading
@@ -14,6 +14,29 @@ about:
         href: https://www.instagram.com/sanghoohoo?igsh=MXVyeHZqMmQxd2J4&utm_source=qr
 jupyter: python3
 ---
+
+
+:::{#hero-heading}
+
+Sanghoo Ahn is the Chief Data Scientist at Wengo Analytics. When not innovating on data platforms, Finley enjoys spending time unicycling and playing with her pet iguana.
+
+## Education
+
+Kyungpook National Univercity | Daegu, South Korea
+Bachelor of Electrical Engineering | Mar 2023(transfer) - present
+
+Korea Polytechnics | Seongnam,  South Korea
+Associate of Electrical Engineering | Mar 2019- Feb 2023
+
+## Experience
+
+Wengo Analytics | Head Data Scientist | April 2018 - present
+
+GeoScynce | Chief Analyst | Sept 2012 - April 2018
+
+:::
+
+### This content appears below the formatted about page content.
 
 ## 안녕하세요!😀
 

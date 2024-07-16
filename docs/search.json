@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "DS Website",
+    "title": "Sanghoo Ahn",
     "section": "",
-    "text": "안녕하세요, 데이터 분석 안상후입니다.\n\n넘파이를 사용해서 벡터 만들기\n\n\nimport numpy as np\nnp.array([1, 2, 3, 4, 5])\n\narray([1, 2, 3, 4, 5])"
+    "text": "Sanghoo Ahn is the Chief Data Scientist at Wengo Analytics. When not innovating on data platforms, Finley enjoys spending time unicycling and playing with her pet iguana.\n\n\nKyungpook National Univercity | Daegu, South Korea Bachelor of Electrical Engineering | Mar 2023(transfer) - present\nKorea Polytechnics | Seongnam, South Korea Associate of Electrical Engineering | Mar 2019- Feb 2023\n\n\n\nWengo Analytics | Head Data Scientist | April 2018 - present\nGeoScynce | Chief Analyst | Sept 2012 - April 2018\n\n \n  \n   \n  \n    \n     Github\n  \n  \n    \n     Instagram"
   },
   {
     "objectID": "index.html#홈페이지-첫-화면입니다",
@@ -37,9 +37,9 @@
   {
     "objectID": "index.html#안녕하세요",
     "href": "index.html#안녕하세요",
-    "title": "DS Website",
-    "section": "",
-    "text": "안녕하세요, 데이터 분석 안상후입니다.\n\n넘파이를 사용해서 벡터 만들기\n\n\nimport numpy as np\nnp.array([1, 2, 3, 4, 5])\n\narray([1, 2, 3, 4, 5])"
+    "title": "Sanghoo Ahn",
+    "section": "안녕하세요!😀",
+    "text": "안녕하세요!😀\n안녕하세요, 데이터 분석 안상후입니다.\n\n넘파이를 사용해서 벡터 만들기\n\n\nimport numpy as np\nnp.array([1, 2, 3, 4, 5])\n\narray([1, 2, 3, 4, 5])"
   },
   {
     "objectID": "HW2.html",
@@ -54,5 +54,33 @@
     "title": "HW2",
     "section": "",
     "text": "자동차 배기량에 따라 고속도로 연비가 다른지 알아보려고 합니다. displ(배기량)이 4이하인 자동차와 5이상인 자동차 중 어떤 자동차의 hwy(고속도로 연비) 평균이 더 높은지 알아보세요.\n\nimport pandas as pd\nimport numpy as np\nmpg=pd.read_csv('data/mpg.csv')\nmpg_l=mpg.query('displ&lt;=4')\nmpg_h=mpg.query('displ&gt;=5')\nmpg_l['hwy'].mean()\nmpg_h['hwy'].mean()\n\nnp.float64(18.07894736842105)\n\n\n자동차 제조 회사에 따라 도시 연비가 어떻게 다른지 알아보려고 합니다. ’audi’와 ’toyota’중 어느 manufacturer(자동차 제조 회사)의 cty(도시 연비)평균이 더 높은지 알아보세요.\n\nmpg_au=mpg.query('manufacturer==\"audi\"')\nmpg_to=mpg.query('manufacturer==\"toyota\"')\nmpg_au['cty'].mean()\nmpg_to['cty'].mean()\n\nnp.float64(18.529411764705884)\n\n\n‘chevrolet’,‘ford’,’honda’자동차의 고속도로 연비 평균을 알아보려고 합니다. 세 회사의 데이터를 추출한 다음 hwy 전체 평균을 구해 보세요.\n\nmpg_3=mpg.query('manufacturer in[\"chevrolet\",\"ford\",\"honda\"]')\nmpg_3['hwy'].mean()\n\nnp.float64(22.50943396226415)"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Sanghoo Ahn",
+    "section": "",
+    "text": "Kyungpook National Univercity | Daegu, South Korea Bachelor of Electrical Engineering | Mar 2023(transfer) - present\nKorea Polytechnics | Seongnam, South Korea Associate of Electrical Engineering | Mar 2019- Feb 2023"
+  },
+  {
+    "objectID": "index.html#experience",
+    "href": "index.html#experience",
+    "title": "Sanghoo Ahn",
+    "section": "",
+    "text": "Wengo Analytics | Head Data Scientist | April 2018 - present\nGeoScynce | Chief Analyst | Sept 2012 - April 2018"
+  },
+  {
+    "objectID": "HW2.html#mpg-데이터를-이용해-분석-문제를-해결해-보세요.-p.153",
+    "href": "HW2.html#mpg-데이터를-이용해-분석-문제를-해결해-보세요.-p.153",
+    "title": "HW2",
+    "section": "mpg 데이터를 이용해 분석 문제를 해결해 보세요. (p.153)",
+    "text": "mpg 데이터를 이용해 분석 문제를 해결해 보세요. (p.153)\n’audi’에서 생산한 자동차 중에 어떤 자동차 모델의 hwy(고속도로 연비)가 높은지 알아보려고 합니다. ’audi’에서 생산한 자동차 중 hwy가 1~5위에 해당하는 자동차의 데이터를 출력하세요.\n\nmpg.query('manufacturer==\"audi\"').sort_values('hwy',ascending=False).head()\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\ncategory\n\n\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n\n\n9\naudi\na4 quattro\n2.0\n2008\n4\nmanual(m6)\n4\n20\n28\np\ncompact"
+  },
+  {
+    "objectID": "HW2.html#mpg-데이터를-이용해-분석-문제를-해결해-보세요.-p.158",
+    "href": "HW2.html#mpg-데이터를-이용해-분석-문제를-해결해-보세요.-p.158",
+    "title": "HW2",
+    "section": "mpg 데이터를 이용해 분석 문제를 해결해 보세요. (p.158)",
+    "text": "mpg 데이터를 이용해 분석 문제를 해결해 보세요. (p.158)\nmpg데이터 복사본을 만들고, cty와 hwy를 더한 ’합산 연비 변수’를 추가하세요.\n\nmpg_new=mpg.copy()\nmpg_new=mpg_new.assign(total=mpg['cty']+mpg['hwy'])\nmpg_new\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\ncategory\ntotal\n\n\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n47\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n50\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n51\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n51\n\n\n4\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\ncompact\n42\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n229\nvolkswagen\npassat\n2.0\n2008\n4\nauto(s6)\nf\n19\n28\np\nmidsize\n47\n\n\n230\nvolkswagen\npassat\n2.0\n2008\n4\nmanual(m6)\nf\n21\n29\np\nmidsize\n50\n\n\n231\nvolkswagen\npassat\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\nmidsize\n42\n\n\n232\nvolkswagen\npassat\n2.8\n1999\n6\nmanual(m5)\nf\n18\n26\np\nmidsize\n44\n\n\n233\nvolkswagen\npassat\n3.6\n2008\n6\nauto(s6)\nf\n17\n26\np\nmidsize\n43\n\n\n\n\n234 rows × 12 columns\n\n\n\n앞에서 만든 ’합산 연비 변수’를 2로 나눠 ’평균 연비 변수’를 추가하세요.\n\nmpg_new=mpg_new.assign(mean=mpg_new['total']/2)\nmpg_new\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\ncategory\ntotal\nmean\n\n\n\n\n0\naudi\na4\n1.8\n1999\n4\nauto(l5)\nf\n18\n29\np\ncompact\n47\n23.5\n\n\n1\naudi\na4\n1.8\n1999\n4\nmanual(m5)\nf\n21\n29\np\ncompact\n50\n25.0\n\n\n2\naudi\na4\n2.0\n2008\n4\nmanual(m6)\nf\n20\n31\np\ncompact\n51\n25.5\n\n\n3\naudi\na4\n2.0\n2008\n4\nauto(av)\nf\n21\n30\np\ncompact\n51\n25.5\n\n\n4\naudi\na4\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\ncompact\n42\n21.0\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n229\nvolkswagen\npassat\n2.0\n2008\n4\nauto(s6)\nf\n19\n28\np\nmidsize\n47\n23.5\n\n\n230\nvolkswagen\npassat\n2.0\n2008\n4\nmanual(m6)\nf\n21\n29\np\nmidsize\n50\n25.0\n\n\n231\nvolkswagen\npassat\n2.8\n1999\n6\nauto(l5)\nf\n16\n26\np\nmidsize\n42\n21.0\n\n\n232\nvolkswagen\npassat\n2.8\n1999\n6\nmanual(m5)\nf\n18\n26\np\nmidsize\n44\n22.0\n\n\n233\nvolkswagen\npassat\n3.6\n2008\n6\nauto(s6)\nf\n17\n26\np\nmidsize\n43\n21.5\n\n\n\n\n234 rows × 13 columns\n\n\n\n’평균 연비 변수’가 가장 높은 자동차 3종의 데이터를 출력하세요.\n\nmpg_new.sort_values('mean',ascending=False).head(3)\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\ncategory\ntotal\nmean\n\n\n\n\n221\nvolkswagen\nnew beetle\n1.9\n1999\n4\nmanual(m5)\nf\n35\n44\nd\nsubcompact\n79\n39.5\n\n\n212\nvolkswagen\njetta\n1.9\n1999\n4\nmanual(m5)\nf\n33\n44\nd\ncompact\n77\n38.5\n\n\n222\nvolkswagen\nnew beetle\n1.9\n1999\n4\nauto(l4)\nf\n29\n41\nd\nsubcompact\n70\n35.0\n\n\n\n\n\n\n\n1~3번 문제를 해결할 수 있는 하나로 연결된 pandas구문을 만들어 실행해보세요. 데이터는 복사본 대신 mpg파일을 이용하세요.\n\nmpg.assign(total= lambda x: x['hwy']+x['cty'],\n    mean= lambda x: x['total']/2)\\\n    .sort_values('mean',ascending=False)\\\n    .head(3)\n\n\n\n\n\n\n\n\nmanufacturer\nmodel\ndispl\nyear\ncyl\ntrans\ndrv\ncty\nhwy\nfl\ncategory\ntotal\nmean\n\n\n\n\n221\nvolkswagen\nnew beetle\n1.9\n1999\n4\nmanual(m5)\nf\n35\n44\nd\nsubcompact\n79\n39.5\n\n\n212\nvolkswagen\njetta\n1.9\n1999\n4\nmanual(m5)\nf\n33\n44\nd\ncompact\n77\n38.5\n\n\n222\nvolkswagen\nnew beetle\n1.9\n1999\n4\nauto(l4)\nf\n29\n41\nd\nsubcompact\n70\n35.0"
   }
 ]
