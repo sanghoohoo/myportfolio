@@ -1,9 +1,21 @@
 ---
 title: ""
+toc: false
+about:
+    id: hero-heading
+    template: jolla
+    image: ces.jpg
+    links: 
+      - icon: github
+        text: Github
+        href: https://github.com/sanghoohoo
+      - icon: instagram
+        text: Instagram
+        href: https://www.instagram.com/sanghoohoo?igsh=MXVyeHZqMmQxd2J4&utm_source=qr
 jupyter: python3
 ---
 
-## 홈페이지 첫 화면입니다!
+## 안녕하세요!😀
 
 안녕하세요, 데이터 분석 안상후입니다.
 
