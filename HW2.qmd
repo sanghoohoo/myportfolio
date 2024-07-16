@@ -1,0 +1,35 @@
+---
+title: "HW2"
+jupyter: python3
+---
+## mpg 데이터를 이용해 분석 문제를 해결해 보세요. (p.144)
+
+**자동차 배기량에 따라 고속도로 연비가 다른지 알아보려고 합니다. displ(배기량)이 4이하인 자동차와 5이상인 자동차 중 어떤 자동차의 hwy(고속도로 연비) 평균이 더 높은지 알아보세요.**
+
+```{python}
+import pandas as pd
+import numpy as np
+mpg=pd.read_csv('data/mpg.csv')
+mpg_l=mpg.query('displ<=4')
+mpg_h=mpg.query('displ>=5')
+mpg_l['hwy'].mean()
+mpg_h['hwy'].mean()
+```
+
+
+**자동차 제조 회사에 따라 도시 연비가 어떻게 다른지 알아보려고 합니다. 'audi'와 'toyota'중 어느 manufacturer(자동차 제조 회사)의 cty(도시 연비)평균이 더 높은지 알아보세요.**
+
+```{python}
+mpg_au=mpg.query('manufacturer=="audi"')
+mpg_to=mpg.query('manufacturer=="toyota"')
+mpg_au['cty'].mean()
+mpg_to['cty'].mean()
+```
+
+
+**'chevrolet','ford','honda'자동차의 고속도로 연비 평균을 알아보려고 합니다. 세 회사의 데이터를 추출한 다음 hwy 전체 평균을 구해 보세요.**
+
+```{python}
+mpg_3=mpg.query('manufacturer in["chevrolet","ford","honda"]')
+mpg_3['hwy'].mean()
+```

@@ -140,6 +140,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <a class="nav-link active" href="./HW1.html" aria-current="page"> 
 <span class="menu-text">HW1</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./HW2.html"> 
+<span class="menu-text">HW2</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -177,7 +181,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p><strong>다음 표의 내용을 데이터 프레임으로 만들어 출력해 보세요. (p.85)</strong></p>
-<div id="ac807e83" class="cell" data-execution_count="1">
+<div id="f4a5808a" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df<span class="op">=</span>pd.DataFrame({</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'제품'</span>:[<span class="st">'사과'</span>,<span class="st">'딸기'</span>,<span class="st">'수박'</span>],</span>
@@ -193,7 +197,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p><strong>mpg데이터 변수명 변경 (p.115)</strong></p>
-<div id="0f0c36f0" class="cell" data-execution_count="2">
+<div id="c78ccc26" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>mpg<span class="op">=</span>pd.read_csv(<span class="st">'data/mpg.csv'</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>mpg_new<span class="op">=</span>mpg.copy()</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>mpg_new<span class="op">=</span>mpg_new.rename(columns<span class="op">=</span>{<span class="st">'cty'</span>:<span class="st">'city'</span>})</span>
@@ -230,7 +234,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p><strong>midway.csv를 불러와 데이터의 특징을 파악하세요. (p.130)</strong></p>
-<div id="dba90864" class="cell" data-execution_count="3">
+<div id="b78cd35f" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>mdw<span class="op">=</span>pd.read_csv(<span class="st">'data/midwest.csv'</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>mdw.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
@@ -465,7 +469,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p><strong>poptotal(전체 인구) 변수를 total로, popasian(아시아 인구) 변수를 asian으로 수정하세요.</strong></p>
-<div id="b335f8c7" class="cell" data-execution_count="4">
+<div id="9f94e87b" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>mdw<span class="op">=</span>mdw.rename(columns<span class="op">=</span>{<span class="st">'poptotal'</span>:<span class="st">'total'</span>})</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>mdw<span class="op">=</span>mdw.rename(columns<span class="op">=</span>{<span class="st">'popasian'</span>:<span class="st">'asian'</span>})</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mdw[[<span class="st">'total'</span>,<span class="st">'asian'</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -487,7 +491,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p><strong>total,asian 변수를 이용해 ‘전체 인구 대비 아시아 인구 백분율’ 파생변수를 추가하고, 히스토그램을 만들어 분포를 살펴보세요.</strong></p>
-<div id="88a79248" class="cell" data-execution_count="5">
+<div id="674b90a0" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>mdw[<span class="st">'per_asian'</span>]<span class="op">=</span>mdw[<span class="st">'asian'</span>]<span class="op">/</span>mdw[<span class="st">'total'</span>]<span class="op">*</span><span class="dv">100</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mdw)</span>
@@ -557,7 +561,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p><strong>아시아 인구 백분율 전체 평균을 구하고, 평균을 초과하면 ‘Large’, 그 외에는 ’Small’을 부여한 파생변수를 만들어 보세요.</strong></p>
-<div id="8c3ac7ec" class="cell" data-execution_count="6">
+<div id="17262d12" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>avg_asian<span class="op">=</span>mdw[<span class="st">'per_asian'</span>].mean()</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>mdw[<span class="st">'amo_asian'</span>]<span class="op">=</span>np.where((mdw[<span class="st">'per_asian'</span>]<span class="op">&gt;</span>avg_asian),<span class="st">'Large'</span>,<span class="st">'Small'</span>)</span>
@@ -619,7 +623,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p><strong>’Large’와 ’Small’에 해당하는 지역이 얼마나 많은지 빈도표와 빈도 막대 그래프를 만들어 확인해 보세요.</strong></p>
-<div id="33165c6f" class="cell" data-execution_count="7">
+<div id="abecdfb4" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>plt.clf()</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>asian_counts<span class="op">=</span>mdw[<span class="st">'amo_asian'</span>].value_counts()</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(asian_counts)</span>
