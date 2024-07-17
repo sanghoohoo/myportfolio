@@ -18,34 +18,24 @@ jupyter: python3
 
 :::{#hero-heading}
 
-Sanghoo Ahn is the Chief Data Scientist at Wengo Analytics. When not innovating on data platforms, Finley enjoys spending time unicycling and playing with her pet iguana.
+Sanghoo Ahn is a student at Kyungpook nat. Univercity majoring in E.E.  When not studying about Electricity or Data Analysis, Sanghoo enjoys to go to gym and play sports.
 
 ## Education
 
-Kyungpook National Univercity | Daegu, South Korea
+- **Kyungpook National Univercity** | Daegu, South Korea
 Bachelor of Electrical Engineering | Mar 2023(transfer) - present
 
-Korea Polytechnics | Seongnam,  South Korea
+- **Korea Polytechnics** | Seongnam,  South Korea
 Associate of Electrical Engineering | Mar 2019- Feb 2023
 
 ## Experience
 
-Wengo Analytics | Head Data Scientist | April 2018 - present
+- **Republic of Korean army** | Discharged as a sergeant | Jun 2020 - Dec 2021
 
-GeoScynce | Chief Analyst | Sept 2012 - April 2018
+## Certificates & Other Slills
 
-:::
-
-### This content appears below the formatted about page content.
-
-## 안녕하세요!😀
-
-안녕하세요, 데이터 분석 안상후입니다.
-
-- 넘파이를 사용해서 벡터 만들기
-
-```{python}
-import numpy as np
-np.array([1, 2, 3, 4, 5])
-```
-
+- Conversation English- **OPIc** IH certified in May 2024
+- Proven English proficiency for business with a total score of **965 in TOEIC**
+- **Industrial Engineer Electricity** (national technical qualification)
+- Completed '**High-speed System Design and Understanding Signal/Power Integrity**' training by IC Design Education Center
+- Completed '**Basic Training Program for Foundry-Oriented Semiconductor Design**' training by Korea Semiconducter Academy
