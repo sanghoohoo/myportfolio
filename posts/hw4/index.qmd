@@ -1,82 +1,17 @@
 ---
-title: "HW3"
+title: "HW4"
 author: 'Sanghoo Ahn'
 date: '2024-07-22'
 categories: [bigdata]
 jupyter: python3
 theme: dark
 ---
-## mpg 데이터를 이용해 분석 문제를 해결해 보세요. (p.144)
+## 
 
-**자동차 배기량에 따라 고속도로 연비가 다른지 알아보려고 합니다. displ(배기량)이 4이하인 자동차와 5이상인 자동차 중 어떤 자동차의 hwy(고속도로 연비) 평균이 더 높은지 알아보세요.**
-
-```{python}
-import pandas as pd
-import numpy as np
-mpg=pd.read_csv('C:/Users/USER/Documents/LS빅데이터스쿨/myportfolio/data/mpg.csv')
-mpg_l=mpg.query('displ<=4')
-mpg_h=mpg.query('displ>=5')
-mpg_l['hwy'].mean()
-mpg_h['hwy'].mean()
-```
-
-
-**자동차 제조 회사에 따라 도시 연비가 어떻게 다른지 알아보려고 합니다. 'audi'와 'toyota'중 어느 manufacturer(자동차 제조 회사)의 cty(도시 연비)평균이 더 높은지 알아보세요.**
+**.**
 
 ```{python}
-mpg_au=mpg.query('manufacturer=="audi"')
-mpg_to=mpg.query('manufacturer=="toyota"')
-mpg_au['cty'].mean()
-mpg_to['cty'].mean()
+
 ```
 
-
-**'chevrolet','ford','honda'자동차의 고속도로 연비 평균을 알아보려고 합니다. 세 회사의 데이터를 추출한 다음 hwy 전체 평균을 구해 보세요.**
-
-```{python}
-mpg_3=mpg.query('manufacturer in["chevrolet","ford","honda"]')
-mpg_3['hwy'].mean()
-```
-
-
-## mpg 데이터를 이용해 분석 문제를 해결해 보세요. (p.153)
-
-**'audi'에서 생산한 자동차 중에 어떤 자동차 모델의 hwy(고속도로 연비)가 높은지 알아보려고 합니다. 'audi'에서 생산한 자동차 중 hwy가 1~5위에 해당하는 자동차의 데이터를 출력하세요.**
-
-```{python}
-mpg.query('manufacturer=="audi"').sort_values('hwy',ascending=False).head()
-```
-
-
-## mpg 데이터를 이용해 분석 문제를 해결해 보세요. (p.158)
-
-**mpg데이터 복사본을 만들고, cty와 hwy를 더한 '합산 연비 변수'를 추가하세요.**
-
-```{python}
-mpg_new=mpg.copy()
-mpg_new=mpg_new.assign(total=mpg['cty']+mpg['hwy'])
-mpg_new
-```
-
-**앞에서 만든 '합산 연비 변수'를 2로 나눠 '평균 연비 변수'를 추가하세요.**
-
-```{python}
-mpg_new=mpg_new.assign(mean=mpg_new['total']/2)
-mpg_new
-```
-
-**'평균 연비 변수'가 가장 높은 자동차 3종의 데이터를 출력하세요.**
-
-```{python}
-mpg_new.sort_values('mean',ascending=False).head(3)
-```
-
-**1~3번 문제를 해결할 수 있는 하나로 연결된 pandas구문을 만들어 실행해보세요. 데이터는 복사본 대신 mpg파일을 이용하세요.**
-
-```{python}
-mpg.assign(total= lambda x: x['hwy']+x['cty'],
-    mean= lambda x: x['total']/2)\
-    .sort_values('mean',ascending=False)\
-    .head(3)
-```
 
