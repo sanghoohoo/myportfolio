@@ -1,0 +1,35 @@
+---
+title: "HW3"
+author: 'Sanghoo Ahn'
+date: '2024-07-22'
+categories: [bigdata]
+jupyter: python3
+---
+## plotly를 활용한 인터랙티브 시각화
+
+**exam데이터 불러오기**
+
+```{python}
+import pandas as pd
+import plotly.express as px
+exam=pd.read_csv('C:/Users/USER/Documents/LS빅데이터스쿨/myportfolio/data/exam.csv')
+exam
+```
+
+
+**학급별 수학 성적 분포 산점도**
+
+```{python}
+px.scatter(data_frame=exam,
+            x='nclass', y='math', color='nclass')
+```
+
+
+**학급별 수학 성적 평균 막대그래프**
+
+```{python}
+df=exam.groupby('nclass', as_index=False).agg(math_mean=('math','mean'))
+df
+px.bar(data_frame=df, x='nclass', y='math_mean', color='nclass')
+```
+
