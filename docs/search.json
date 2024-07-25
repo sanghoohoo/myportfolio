@@ -95,7 +95,7 @@
     "href": "blog.html",
     "title": "myblog",
     "section": "",
-    "text": "HW3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nSanghoo Ahn\n\n\n\n\n\n\n\n\n\n\n\n\nHW4\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nSanghoo Ahn\n\n\n\n\n\n\n\n\n\n\n\n\nHW2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\nSanghoo Ahn\n\n\n\n\n\n\n\n\n\n\n\n\nHW1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 12, 2024\n\n\nSanghoo Ahn\n\n\n\n\n\n\nNo matching items"
+    "text": "HW2.1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nSanghoo Ahn\n\n\n\n\n\n\n\n\n\n\n\n\nHW2.2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nSanghoo Ahn\n\n\n\n\n\n\n\n\n\n\n\n\nHW2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\nSanghoo Ahn\n\n\n\n\n\n\n\n\n\n\n\n\nHW1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 12, 2024\n\n\nSanghoo Ahn\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/hw2/index.html",
@@ -206,6 +206,41 @@
     "objectID": "posts/hw4/index.html#mpg데이터를-이용해-분석-문제를-해결해-보세요.",
     "href": "posts/hw4/index.html#mpg데이터를-이용해-분석-문제를-해결해-보세요.",
     "title": "HW4",
+    "section": "mpg데이터를 이용해 분석 문제를 해결해 보세요.",
+    "text": "mpg데이터를 이용해 분석 문제를 해결해 보세요.\n어떤 회사에서 생산한 ’suv’차종의 도시 연비가 높은지 알아보려고 합니다. ’suv’차종을 대상으로 cty(도시 연비) 평균이 가장 높은 회사 다섯 곳을 막대 그래프로 표현해 보세요. 막대는 연비가 높은 순으로 정렬하세요.\n\ndf_mpg=mpg.groupby('manufacturer', as_index=False)\\\n    .agg(cty_mean=('cty','mean')).\\\n    sort_values('cty_mean',ascending=False).head()\nsns.barplot(data=df_mpg, x='manufacturer', y='cty_mean', hue='manufacturer')\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n자동차 중에 어떤 category(자동차 종류)가 많은지 알아보려고 합니다. sns.barplot()을 이용해 자동차 종류별 빈도를 표현한 막대 그래프를 만들어 보세요. 막대는 빈도가 높은 순으로 정렬하세요\n\ndf_mpg2=mpg.groupby('category', as_index=False)\\\n    .agg(cat_count=('category','count')).\\\n    sort_values('cat_count',ascending=False)\nsns.barplot(data=df_mpg2, x='category', y='cat_count', hue='category')\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "posts/hw2.1/index.html",
+    "href": "posts/hw2.1/index.html",
+    "title": "HW2.1",
+    "section": "",
+    "text": "exam데이터 불러오기\n\nimport pandas as pd\nimport plotly.express as px\nexam=pd.read_csv('C:/Users/USER/Documents/LS빅데이터스쿨/myportfolio/data/exam.csv')\nexam\n\n\n\n\n\n\n\n\nid\nnclass\nmath\nenglish\nscience\n\n\n\n\n0\n1\n1\n50\n98\n50\n\n\n1\n2\n1\n60\n97\n60\n\n\n2\n3\n1\n45\n86\n78\n\n\n3\n4\n1\n30\n98\n58\n\n\n4\n5\n2\n25\n80\n65\n\n\n5\n6\n2\n50\n89\n98\n\n\n6\n7\n2\n80\n90\n45\n\n\n7\n8\n2\n90\n78\n25\n\n\n8\n9\n3\n20\n98\n15\n\n\n9\n10\n3\n50\n98\n45\n\n\n10\n11\n3\n65\n65\n65\n\n\n11\n12\n3\n45\n85\n32\n\n\n12\n13\n4\n46\n98\n65\n\n\n13\n14\n4\n48\n87\n12\n\n\n14\n15\n4\n75\n56\n78\n\n\n15\n16\n4\n58\n98\n65\n\n\n16\n17\n5\n65\n68\n98\n\n\n17\n18\n5\n80\n78\n90\n\n\n18\n19\n5\n89\n68\n87\n\n\n19\n20\n5\n78\n83\n58\n\n\n\n\n\n\n\n학급별 수학 성적 분포 산점도\n\npx.scatter(data_frame=exam,\n            x='nclass', y='math', color='nclass')\n\n                                                \n\n\n학급별 수학 성적 평균 막대그래프\n\ndf=exam.groupby('nclass', as_index=False).agg(math_mean=('math','mean'))\ndf\npx.bar(data_frame=df, x='nclass', y='math_mean', color='nclass')"
+  },
+  {
+    "objectID": "posts/hw2.1/index.html#plotly를-활용한-인터랙티브-시각화",
+    "href": "posts/hw2.1/index.html#plotly를-활용한-인터랙티브-시각화",
+    "title": "HW2.1",
+    "section": "",
+    "text": "exam데이터 불러오기\n\nimport pandas as pd\nimport plotly.express as px\nexam=pd.read_csv('C:/Users/USER/Documents/LS빅데이터스쿨/myportfolio/data/exam.csv')\nexam\n\n\n\n\n\n\n\n\nid\nnclass\nmath\nenglish\nscience\n\n\n\n\n0\n1\n1\n50\n98\n50\n\n\n1\n2\n1\n60\n97\n60\n\n\n2\n3\n1\n45\n86\n78\n\n\n3\n4\n1\n30\n98\n58\n\n\n4\n5\n2\n25\n80\n65\n\n\n5\n6\n2\n50\n89\n98\n\n\n6\n7\n2\n80\n90\n45\n\n\n7\n8\n2\n90\n78\n25\n\n\n8\n9\n3\n20\n98\n15\n\n\n9\n10\n3\n50\n98\n45\n\n\n10\n11\n3\n65\n65\n65\n\n\n11\n12\n3\n45\n85\n32\n\n\n12\n13\n4\n46\n98\n65\n\n\n13\n14\n4\n48\n87\n12\n\n\n14\n15\n4\n75\n56\n78\n\n\n15\n16\n4\n58\n98\n65\n\n\n16\n17\n5\n65\n68\n98\n\n\n17\n18\n5\n80\n78\n90\n\n\n18\n19\n5\n89\n68\n87\n\n\n19\n20\n5\n78\n83\n58\n\n\n\n\n\n\n\n학급별 수학 성적 분포 산점도\n\npx.scatter(data_frame=exam,\n            x='nclass', y='math', color='nclass')\n\n                                                \n\n\n학급별 수학 성적 평균 막대그래프\n\ndf=exam.groupby('nclass', as_index=False).agg(math_mean=('math','mean'))\ndf\npx.bar(data_frame=df, x='nclass', y='math_mean', color='nclass')"
+  },
+  {
+    "objectID": "posts/hw2.2/index.html",
+    "href": "posts/hw2.2/index.html",
+    "title": "HW2.2",
+    "section": "",
+    "text": "mpg데이터의 cty(도시 연비)와 hwy(고속도로 연비) 간에 어떤 관계가 있는지 알아보려고 합니다. x축은 cty, y축은 hwy로 된 산점도를 만들어 보세요.\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nmpg=pd.read_csv('C:/Users/USER/Documents/LS빅데이터스쿨/myportfolio/data/mpg.csv')\nsns.scatterplot(data=mpg,\n                x='cty', y='hwy')\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n미국의 지역별 인구통계 정보를 담은 midwest.csv를 이용해 전체 인구와 아시아인 인구 간에 어떤 관계가 있는지 알아보려고 합니다. x축은 poptotal(전체 인구), y축은 popasian(아시아인 인구)으로 된 산점도를 만들어 보세요. 전체 인구는 50만 명 이하, 아시아인 인구는 1만 명 이하인 지역만 산점도에 표시되게 설정하세요.\n\nmdw=pd.read_csv('C:/Users/USER/Documents/LS빅데이터스쿨/myportfolio/data/midwest.csv')\nsns.scatterplot(data=mdw,\n                x='poptotal', y='popasian').set(xlim=[0,500000], ylim=[0,10000])\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "posts/hw2.2/index.html#mpg데이터와-midwest-데이터를-이용해-분석-문제를-해결해-보세요.",
+    "href": "posts/hw2.2/index.html#mpg데이터와-midwest-데이터를-이용해-분석-문제를-해결해-보세요.",
+    "title": "HW2.2",
+    "section": "",
+    "text": "mpg데이터의 cty(도시 연비)와 hwy(고속도로 연비) 간에 어떤 관계가 있는지 알아보려고 합니다. x축은 cty, y축은 hwy로 된 산점도를 만들어 보세요.\n\nimport pandas as pd\nimport matplotlib.pyplot as plt\nimport seaborn as sns\nmpg=pd.read_csv('C:/Users/USER/Documents/LS빅데이터스쿨/myportfolio/data/mpg.csv')\nsns.scatterplot(data=mpg,\n                x='cty', y='hwy')\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n미국의 지역별 인구통계 정보를 담은 midwest.csv를 이용해 전체 인구와 아시아인 인구 간에 어떤 관계가 있는지 알아보려고 합니다. x축은 poptotal(전체 인구), y축은 popasian(아시아인 인구)으로 된 산점도를 만들어 보세요. 전체 인구는 50만 명 이하, 아시아인 인구는 1만 명 이하인 지역만 산점도에 표시되게 설정하세요.\n\nmdw=pd.read_csv('C:/Users/USER/Documents/LS빅데이터스쿨/myportfolio/data/midwest.csv')\nsns.scatterplot(data=mdw,\n                x='poptotal', y='popasian').set(xlim=[0,500000], ylim=[0,10000])\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "posts/hw2.2/index.html#mpg데이터를-이용해-분석-문제를-해결해-보세요.",
+    "href": "posts/hw2.2/index.html#mpg데이터를-이용해-분석-문제를-해결해-보세요.",
+    "title": "HW2.2",
     "section": "mpg데이터를 이용해 분석 문제를 해결해 보세요.",
     "text": "mpg데이터를 이용해 분석 문제를 해결해 보세요.\n어떤 회사에서 생산한 ’suv’차종의 도시 연비가 높은지 알아보려고 합니다. ’suv’차종을 대상으로 cty(도시 연비) 평균이 가장 높은 회사 다섯 곳을 막대 그래프로 표현해 보세요. 막대는 연비가 높은 순으로 정렬하세요.\n\ndf_mpg=mpg.groupby('manufacturer', as_index=False)\\\n    .agg(cty_mean=('cty','mean')).\\\n    sort_values('cty_mean',ascending=False).head()\nsns.barplot(data=df_mpg, x='manufacturer', y='cty_mean', hue='manufacturer')\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n자동차 중에 어떤 category(자동차 종류)가 많은지 알아보려고 합니다. sns.barplot()을 이용해 자동차 종류별 빈도를 표현한 막대 그래프를 만들어 보세요. 막대는 빈도가 높은 순으로 정렬하세요\n\ndf_mpg2=mpg.groupby('category', as_index=False)\\\n    .agg(cat_count=('category','count')).\\\n    sort_values('cat_count',ascending=False)\nsns.barplot(data=df_mpg2, x='category', y='cat_count', hue='category')\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
   }
