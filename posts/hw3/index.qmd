@@ -53,6 +53,6 @@ norm.cdf(3, loc=2, scale=3)+1-norm.cdf(7, loc=2, scale=3)
 **LS 빅데이터 스쿨 학생들의 중간고사 점수는 평균이 30이고, 분산이 4인 정규분포를 따른다. 상위 5%에 해당하는 학생의 점수는?**
 ```{python}
 score=norm.ppf(0.95, loc=30, scale=2)
-score
+print(score)
 ```
 
