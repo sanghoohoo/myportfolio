@@ -17,14 +17,14 @@ from scipy.stats import uniform
 import seaborn as sns
 x=uniform.rvs(loc=3, scale=4, size=200000).reshape(10000,20)
 x.shape
-s_2=(((x - 6.5)**2) / (20-1)).sum(axis=1)
+s_2=(((x - 5)**2) / (20-1)).sum(axis=1)
 sns.histplot(s_2)
 plt.show()
 plt.clf()
 
 ```
 ```{python}
-k_2=(((x - 6.5)**2) / 20).sum(axis=1)
+k_2=(((x - 5)**2) / 20).sum(axis=1)
 sns.histplot(k_2)
 plt.show()
 plt.clf()
