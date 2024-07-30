@@ -1,0 +1,104 @@
+---
+title: "HW5"
+author: 'Sanghoo Ahn'
+date: '2024-07-22'
+categories: [bigdata]
+jupyter: python3
+---
+**성별에 따른 월급 설문조사 그래프에서 각 성별 95% 신뢰구간 계산 후 그리기 norm.ppf() 사용해서 그릴 것. 모분산은 표본분산을 사용해서 규정.**
+
+# 기존 그래프
+
+```{python}
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+raw_welfare = pd.read_spss('C:/Users/USER/Documents/LS빅데이터스쿨/myportfolio/data/Koweps_hpwc14_2019_beta2.sav')
+welfare=raw_welfare.copy()
+
+welfare = welfare.rename(
+    columns = {'h14_g3' : 'sex',
+               'h14_g4' : 'birth',
+               'h14_g10' : 'marriage_type',
+               'h14_g11' : 'religion',
+               'p1402_8aq1' : 'income',
+               'h14_eco9' : 'code_job',
+               'h14_reg7' : 'code_religion',}
+)
+
+welfare = welfare[['sex','birth', 'marriage_type', 'religion',
+                   'income', 'code_job', 'code_religion']]
+                   
+welfare['sex']=np.where(welfare['sex']==1, 'male', 'female')
+
+sex_income = welfare.dropna(subset = 'income')\
+                    .groupby('sex', as_index = False)\
+                    .agg(mean_income = ('income', 'mean'))
+                    
+sns.barplot(data = sex_income, x = 'sex', y = 'mean_income', hue = 'sex')
+
+
+plt.show()
+```
+
+# 표본평균과 표본분산 구하기
+
+```{python}
+mean_male = sex_income.iloc[1,1]
+mean_female = sex_income.iloc[0,1]
+print('mean male: ', mean_male)
+```
+```{python}
+print('mean female: ', mean_female)
+```
+```{python}
+std_income = welfare.dropna(subset = 'income')\
+                    .groupby('sex', as_index = False)\
+                    .agg(std_income = ('income', 'std'))
+std_male = std_income.iloc[1,1]
+std_female = std_income.iloc[0,1]
+
+print('std. male: ', std_male)
+```
+```{python}
+print('std. female:', std_female)
+```
+
+# 신뢰구간 구하기
+
+```{python}
+from scipy.stats import norm
+z_0025 = norm.ppf(0.975, loc=0, scale=1)
+n_male = welfare.dropna(subset = 'income').query("sex=='male'")['income'].count()
+n_female = welfare.dropna(subset = 'income').query("sex=='female'")['income'].count()
+ci_male1 = mean_male + z_0025 * std_male/np.sqrt(n_male)
+ci_male2 = mean_male - z_0025 * std_male/np.sqrt(n_male)
+ci_female1 = mean_female + z_0025 * std_female/np.sqrt(n_female)
+ci_female2 = mean_female - z_0025 * std_female/np.sqrt(n_female)
+ci_male1
+ci_male2
+
+print('c.i.male upper: ', ci_male1)
+```
+```{python}
+print('c.i.male lower: ', ci_male2)
+```
+```{python}
+print('c.i.female upper: ', ci_female1)
+```
+```{python}
+print('c.i.female lower: ', ci_female1)
+```
+
+# 그래프 그리기
+
+```{python}
+sns.barplot(data = sex_income, x = 'sex', y = 'mean_income', hue = 'sex')
+plt.plot([0,0], [ci_female1 , ci_female2], color='r')
+plt.plot([1,1], [ci_male1 , ci_male2], color='r')
+plt.show()
+plt.clf()
+```
+
