@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Sanghoo Ahn",
     "section": "",
-    "text": "Passionate Electrical Engineering student with a strong foundation in electrical and electronic engineering, specializing in power systems and electronic circuit design.\n\n\n\nKyungpook National Univercity | Daegu, South Korea Bachelor of Electrical Engineering | Mar 2023(transfer) - present GPA : 4.1/4.5\nKorea Polytechnics | Seongnam, South Korea Associate of Electrical Engineering | Mar 2019- Feb 2023 GPA : 4.0/4.5\nCollege of English Language | San Diego, USA English Language Course | Jan 2024 - Mar 2024\n\n\n\n\n\nRepublic of Korean army | Discharged as a sergeant | Jun 2020 - Dec 2021\n\n\n\n\n\nConversation English- OPIc IH certified in May 2024\nProven English proficiency for business with a total score of 965 in TOEIC\nIndustrial Engineer Electricity (national technical qualification)\nCompleted ‘High-speed System Design and Understanding Signal/Power Integrity’ training by IC Design Education Center\nCompleted ‘Basic Training Program for Foundry-Oriented Semiconductor Design’ training by Korea Semiconducter Academy\n\n\n\n\n \n  \n   \n  \n    \n     Github\n  \n  \n    \n     Instagram"
+    "text": "Passionate Electrical Engineering student with a strong foundation in electrical and electronic engineering, specializing in power systems and electronic circuit design.\n\n\n\nKyungpook National Univercity | Daegu, South Korea Bachelor of Electrical Engineering | Mar 2023(transfer) - present GPA : 4.1/4.5\nKorea Polytechnics | Seongnam, South Korea Associate of Electrical Engineering | Mar 2019- Feb 2023 GPA : 4.0/4.5\nCollege of English Language | San Diego, USA English Language Course | Jan 2024 - Mar 2024\n\n\n\n\n\nRepublic of Korean army | Discharged as a sergeant | Jun 2020 - Dec 2021\n\n\n\n\n\nGold Prize in Creative Engineering Design Competition, Kyungpook National University\n\n\n\n\n\nConversation English- OPIc IH certified in May 2024\nProven English proficiency for business with a total score of 965 in TOEIC\nIndustrial Engineer Electricity (national technical qualification)\nCompleted ‘High-speed System Design and Understanding Signal/Power Integrity’ training by IC Design Education Center\nCompleted ‘Basic Training Program for Foundry-Oriented Semiconductor Design’ training by Korea Semiconducter Academy\n\n\n\n\n \n  \n   \n  \n    \n     Github\n  \n  \n    \n     Instagram"
   },
   {
     "objectID": "index.html#홈페이지-첫-화면입니다",
@@ -243,5 +243,12 @@
     "title": "HW2.2",
     "section": "mpg데이터를 이용해 분석 문제를 해결해 보세요.",
     "text": "mpg데이터를 이용해 분석 문제를 해결해 보세요.\n어떤 회사에서 생산한 ’suv’차종의 도시 연비가 높은지 알아보려고 합니다. ’suv’차종을 대상으로 cty(도시 연비) 평균이 가장 높은 회사 다섯 곳을 막대 그래프로 표현해 보세요. 막대는 연비가 높은 순으로 정렬하세요.\n\ndf_mpg=mpg.groupby('manufacturer', as_index=False)\\\n    .agg(cty_mean=('cty','mean')).\\\n    sort_values('cty_mean',ascending=False).head()\nsns.barplot(data=df_mpg, x='manufacturer', y='cty_mean', hue='manufacturer')\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;\n\n\n자동차 중에 어떤 category(자동차 종류)가 많은지 알아보려고 합니다. sns.barplot()을 이용해 자동차 종류별 빈도를 표현한 막대 그래프를 만들어 보세요. 막대는 빈도가 높은 순으로 정렬하세요\n\ndf_mpg2=mpg.groupby('category', as_index=False)\\\n    .agg(cat_count=('category','count')).\\\n    sort_values('cat_count',ascending=False)\nsns.barplot(data=df_mpg2, x='category', y='cat_count', hue='category')\nplt.show()\nplt.clf()\n\n\n\n\n\n\n\n\n&lt;Figure size 672x480 with 0 Axes&gt;"
+  },
+  {
+    "objectID": "index.html#awards-honors",
+    "href": "index.html#awards-honors",
+    "title": "Sanghoo Ahn",
+    "section": "",
+    "text": "Gold Prize in Creative Engineering Design Competition, Kyungpook National University"
   }
 ]
