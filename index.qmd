@@ -18,7 +18,7 @@ jupyter: python3
 
 :::{#hero-heading}
 
-Sanghoo Ahn is a student at Kyungpook nat. Univercity majoring in E.E..  When not studying about Electricity or Data Analysis, Sanghoo enjoys to go to gym and play sports.
+Passionate Electrical Engineering student with a strong foundation in electrical and electronic engineering, specializing in power systems and electronic circuit design.
 
 ## Education
 
