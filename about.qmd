@@ -2,7 +2,7 @@
 title: "About"
 jupyter: python3
 ---
-
+  
 ## Summary
 
 Passionate Electrical Engineering student with a strong foundation in electrical and electronic engineering, specializing in power systems and electronic circuit design.
