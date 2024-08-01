@@ -29,10 +29,10 @@ jupyter: python3
 
 :::{#hero-heading}
 
-Hello! I'm Sanghoo Ahn
-
 Welcome to my personal page!  
-I am an enthusiastic Electrical Engineering student  
-with a strong passion for semiconductor technology.  
+  
+I’m an Electrical Engineering student with a strong passion  
+for semiconductor technology and big data analytics.  
 
-Feel free to explore my work and connect with me through the links below!
+Feel free to explore my work and connect with me through the links below.  
+I’m excited to share my journey and collaborate with others who share similar interests!
