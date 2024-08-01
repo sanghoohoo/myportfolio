@@ -32,7 +32,7 @@ jupyter: python3
 
 :::{#hero-heading}
 
-Welcome to my personal page!  
+Welcome to my personal page!😊  
   
 I’m an Electrical Engineering student with a strong passion  
 for semiconductor technology and big data analytics.  
