@@ -15,36 +15,23 @@ about:
 jupyter: python3
 ---
 
+<style>
+/* styles.css */
+#hero-heading {
+  text-align: center;
+  color: #333;
+  font-size: 15px;
+  padding: 10px;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+}
+</style>
 
 :::{#hero-heading}
 
-Passionate Electrical Engineering student with a strong foundation in electrical and electronic engineering, specializing in power systems and electronic circuit design.
+Hello! I'm Sanghoo Ahn
 
-## Education
+Welcome to my personal page! I am an enthusiastic Electrical Engineering student  
+with a strong passion for semiconductor technology.  
 
-- **Kyungpook National Univercity** | Daegu, South Korea
-<br>Bachelor of Electrical Engineering | Mar 2023(transfer) - present
-<br>GPA : 4.1/4.5
-
-- **Korea Polytechnics** | Seongnam,  South Korea
-<br>Associate of Electrical Engineering | Mar 2019- Feb 2023
-<br>GPA : 4.0/4.5
-
-- **College of English Language** | San Diego, USA
-<br>English Language Course | Jan 2024 - Mar 2024
-
-## Experience
-
-- **Republic of Korean army** | Discharged as a sergeant | Jun 2020 - Dec 2021
-
-## Awards & Honors
-
-- Gold Prize in **Creative Engineering Design Competition**, Kyungpook National University
-
-## Certificates & Other Slills
-
-- Conversation English- **OPIc IH** certified in May 2024
-- Proven English proficiency for business with a total score of **965 in TOEIC**
-- **Industrial Engineer Electricity** (national technical qualification)
-- Completed '**High-speed System Design and Understanding Signal/Power Integrity**' training by IC Design Education Center
-- Completed '**Basic Training Program for Foundry-Oriented Semiconductor Design**' training by Korea Semiconducter Academy
+Feel free to explore my work and connect with me through the links below!
