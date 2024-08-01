@@ -1,5 +1,5 @@
 ---
-title: "myblog"
+title: "LS bigdata"
 listing:
   contents: posts
   sort: "date desc"
