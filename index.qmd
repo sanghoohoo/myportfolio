@@ -12,6 +12,9 @@ about:
       - icon: instagram
         text: Instagram
         href: https://www.instagram.com/sanghoohoo?igsh=MXVyeHZqMmQxd2J4&utm_source=qr
+      - icon: envelope
+        text: Email
+        href: mailto:happyash1004@gmail.com
 jupyter: python3
 ---
 
