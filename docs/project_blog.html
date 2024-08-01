@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Sanghoo Ahn</title>
+<title>Project – Sanghoo Ahn</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,9 +30,12 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
@@ -65,12 +68,70 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      
+      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -88,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -100,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">LS bigdata</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./project_blog.html"> 
+    <a class="nav-link active" href="./project_blog.html" aria-current="page"> 
 <span class="menu-text">Project</span></a>
   </li>  
 </ul>
@@ -114,72 +175,67 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-
-
-
-<div class="quarto-about-jolla">
-  <img src="ces.jpg" class="about-image
-  round " style="height: 15em; width: 15em;">
- <header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Sanghoo Ahn</h1>
+<h1 class="title">Project</h1>
 </div>
+
+
+
 <div class="quarto-title-meta">
+
+    
+  
+    
   </div>
-</header><div id="hero-heading">
-<p>Passionate Electrical Engineering student with a strong foundation in electrical and electronic engineering, specializing in power systems and electronic circuit design.</p>
-<section id="education" class="level2">
-<h2 data-anchor-id="education">Education</h2>
-<ul>
-<li><p><strong>Kyungpook National Univercity</strong> | Daegu, South Korea <br>Bachelor of Electrical Engineering | Mar 2023(transfer) - present <br>GPA : 4.1/4.5</p></li>
-<li><p><strong>Korea Polytechnics</strong> | Seongnam, South Korea <br>Associate of Electrical Engineering | Mar 2019- Feb 2023 <br>GPA : 4.0/4.5</p></li>
-<li><p><strong>College of English Language</strong> | San Diego, USA <br>English Language Course | Jan 2024 - Mar 2024</p></li>
-</ul>
-</section>
-<section id="experience" class="level2">
-<h2 data-anchor-id="experience">Experience</h2>
-<ul>
-<li><strong>Republic of Korean army</strong> | Discharged as a sergeant | Jun 2020 - Dec 2021</li>
-</ul>
-</section>
-<section id="awards-honors" class="level2">
-<h2 data-anchor-id="awards-honors">Awards &amp; Honors</h2>
-<ul>
-<li>Gold Prize in <strong>Creative Engineering Design Competition</strong>, Kyungpook National University</li>
-</ul>
-</section>
-<section id="certificates-other-slills" class="level2">
-<h2 data-anchor-id="certificates-other-slills">Certificates &amp; Other Slills</h2>
-<ul>
-<li>Conversation English- <strong>OPIc IH</strong> certified in May 2024</li>
-<li>Proven English proficiency for business with a total score of <strong>965 in TOEIC</strong></li>
-<li><strong>Industrial Engineer Electricity</strong> (national technical qualification)</li>
-<li>Completed ‘<strong>High-speed System Design and Understanding Signal/Power Integrity</strong>’ training by IC Design Education Center</li>
-<li>Completed ‘<strong>Basic Training Program for Foundry-Oriented Semiconductor Design</strong>’ training by Korea Semiconducter Academy</li>
-</ul>
+  
 
 
-</section>
-</div> 
-  <hr class="about-sep">
-   <div class="about-links">
-  <a href="https://github.com/sanghoohoo" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-  <a href="https://www.instagram.com/sanghoohoo?igsh=MXVyeHZqMmQxd2J4&amp;utm_source=qr" class="about-link" rel="" target="">
-    <i class="bi bi-instagram"></i>
-     <span class="about-link-text">Instagram</span>
-  </a>
+</header>
+
+
+
+
+
+
+<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="list quarto-listing-default">
+<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1722471555134" data-listing-reading-time-sort="6" data-listing-word-count-sort="1163">
+<div class="thumbnail">
+<p><a href="./projects/fire_project/fire_presentation.html" class="no-external"></a></p><a href="./projects/fire_project/fire_presentation.html" class="no-external">
+<p class="card-img-top"><img src="projects\fire_project\fire_presentation_files\figure-html\cell-13-output-1.png"  class="thumbnail-image card-img"/></p>
+</a><p><a href="./projects/fire_project/fire_presentation.html" class="no-external"></a></p>
+</div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./projects/fire_project/fire_presentation.html" class="no-external">계절별 화재발생 빈도 및 요인 분석</a>
+</h3>
+<div class="listing-subtitle">
+<a href="./projects/fire_project/fire_presentation.html" class="no-external"></a>
+</div>
+<div class="listing-description">
+<a href="./projects/fire_project/fire_presentation.html" class="no-external"><br></a>
 </div>
 </div>
-
-
-</main> <!-- /main -->
+<div class="metadata">
+<p><a href="./projects/fire_project/fire_presentation.html" class="no-external"></a></p><a href="./projects/fire_project/fire_presentation.html" class="no-external">
+<div class="listing-author">
+명예소방관 시켜조🚒 : 안상후, 오서연, 김주영, 김재희
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -200,6 +256,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     
