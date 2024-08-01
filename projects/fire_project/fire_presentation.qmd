@@ -3,6 +3,7 @@ title: "계절별 화재발생 빈도 및 요인 분석"
 author: "명예소방관 시켜조🚒 : 안상후, 오서연, 김주영, 김재희"
 format: html
 editor: visual
+categories: [LS bigdata]
 jupyter: python3
 ---
 
