@@ -2,7 +2,7 @@
 title: "HW2.2"
 author: 'Sanghoo Ahn'
 date: '2024-07-22'
-categories: [bigdata]
+categories: [Homework]
 jupyter: python3
 ---
 ## mpg데이터와 midwest 데이터를 이용해 분석 문제를 해결해 보세요.

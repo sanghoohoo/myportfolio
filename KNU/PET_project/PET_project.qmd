@@ -1,9 +1,9 @@
 ---
 title: "All In One PET 수거기"
-author: 안상후
+author: Sanghoo Ahn
 format: html
 editor: visual
-categories: [KNU]
+categories: [project]
 jupyter: python3
 ---
 

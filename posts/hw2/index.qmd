@@ -2,7 +2,7 @@
 title: "HW2"
 author: 'Sanghoo Ahn'
 date: '2024-07-16'
-categories: [bigdata]
+categories: [Homework]
 jupyter: python3
 ---
 ## mpg 데이터를 이용해 분석 문제를 해결해 보세요. (p.144)

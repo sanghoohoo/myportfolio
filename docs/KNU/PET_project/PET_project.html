@@ -7,9 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Sanghoo Ahn">
-<meta name="dcterms.date" content="2024-07-22">
 
-<title>Sanghoo Ahn - HW5</title>
+<title>Sanghoo Ahn - All In One PET 수거기</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -110,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top quarto-banner">
+  <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -137,8 +102,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">LS bigdata</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../project_blog.html"> 
-<span class="menu-text">Project</span></a>
+    <a class="nav-link" href="../../KNU_blog.html"> 
+<span class="menu-text">KNU</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -148,38 +113,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">HW5</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">Homework</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Sanghoo Ahn </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">July 22, 2024</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
@@ -187,156 +121,56 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#기존-그래프" id="toc-기존-그래프" class="nav-link active" data-scroll-target="#기존-그래프">기존 그래프</a></li>
-  <li><a href="#표본평균과-표본분산-구하기" id="toc-표본평균과-표본분산-구하기" class="nav-link" data-scroll-target="#표본평균과-표본분산-구하기">표본평균과 표본분산 구하기</a></li>
-  <li><a href="#신뢰구간-구하기" id="toc-신뢰구간-구하기" class="nav-link" data-scroll-target="#신뢰구간-구하기">신뢰구간 구하기</a></li>
-  <li><a href="#그래프-그리기" id="toc-그래프-그리기" class="nav-link" data-scroll-target="#그래프-그리기">그래프 그리기</a></li>
+  <li><a href="#문제정의-및-trend-분석" id="toc-문제정의-및-trend-분석" class="nav-link active" data-scroll-target="#문제정의-및-trend-분석">문제정의 및 Trend 분석</a></li>
+  <li><a href="#작품도" id="toc-작품도" class="nav-link" data-scroll-target="#작품도">작품도</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">All In One PET 수거기</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">project</div>
+  </div>
+  </div>
 
 
 
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Sanghoo Ahn </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
 
 
-<p><strong>성별에 따른 월급 설문조사 그래프에서 각 성별 95% 신뢰구간 계산 후 그리기 norm.ppf() 사용해서 그릴 것. 모분산은 표본분산을 사용해서 규정.</strong></p>
-<section id="기존-그래프" class="level1">
-<h1>기존 그래프</h1>
-<div id="d25b2f2d" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>raw_welfare <span class="op">=</span> pd.read_spss(<span class="st">'../../data/Koweps_hpwc14_2019_beta2.sav'</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>welfare<span class="op">=</span>raw_welfare.copy()</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>welfare <span class="op">=</span> welfare.rename(</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    columns <span class="op">=</span> {<span class="st">'h14_g3'</span> : <span class="st">'sex'</span>,</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>               <span class="st">'h14_g4'</span> : <span class="st">'birth'</span>,</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>               <span class="st">'h14_g10'</span> : <span class="st">'marriage_type'</span>,</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>               <span class="st">'h14_g11'</span> : <span class="st">'religion'</span>,</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>               <span class="st">'p1402_8aq1'</span> : <span class="st">'income'</span>,</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>               <span class="st">'h14_eco9'</span> : <span class="st">'code_job'</span>,</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>               <span class="st">'h14_reg7'</span> : <span class="st">'code_religion'</span>,}</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>welfare <span class="op">=</span> welfare[[<span class="st">'sex'</span>,<span class="st">'birth'</span>, <span class="st">'marriage_type'</span>, <span class="st">'religion'</span>,</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>                   <span class="st">'income'</span>, <span class="st">'code_job'</span>, <span class="st">'code_religion'</span>]]</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>                   </span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>welfare[<span class="st">'sex'</span>]<span class="op">=</span>np.where(welfare[<span class="st">'sex'</span>]<span class="op">==</span><span class="dv">1</span>, <span class="st">'male'</span>, <span class="st">'female'</span>)</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>sex_income <span class="op">=</span> welfare.dropna(subset <span class="op">=</span> <span class="st">'income'</span>)<span class="op">\</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>                    .groupby(<span class="st">'sex'</span>, as_index <span class="op">=</span> <span class="va">False</span>)<span class="op">\</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>                    .agg(mean_income <span class="op">=</span> (<span class="st">'income'</span>, <span class="st">'mean'</span>))</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>                    </span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>sns.barplot(data <span class="op">=</span> sex_income, x <span class="op">=</span> <span class="st">'sex'</span>, y <span class="op">=</span> <span class="st">'mean_income'</span>, hue <span class="op">=</span> <span class="st">'sex'</span>)</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/cell-2-output-1.png" width="593" height="429" class="figure-img"></p>
-</figure>
-</div>
-</div>
-</div>
+</header>
+
+
+<p><br></p>
+<section id="문제정의-및-trend-분석" class="level2">
+<h2 class="anchored" data-anchor-id="문제정의-및-trend-분석">문제정의 및 Trend 분석</h2>
+<ul>
+<li>많은 카페와 커피용기를 들고 다니는 사람들이 관찰됨, 길거리에는 무분별하게 버려진 커피용기와 PET용기가 많이 보임.<br>
+</li>
+<li>재활용을 통해 탄소배출을 줄이는 것이 중요한데, 커피용기와 PET용기를 세척하지 않고 버리면 재활용이 불가능함.<br>
+</li>
+<li>PET용기를 <strong>세척 후 수거</strong>하고 <strong>압축 시스템</strong>을 추가해 더 많은 양을 수용할 수 있는 수거기를 고안, <strong>태양광 에너지</strong>를 이용해 친환경적으로 제품을 작동시킴.</li>
+</ul>
 </section>
-<section id="표본평균과-표본분산-구하기" class="level1">
-<h1>표본평균과 표본분산 구하기</h1>
-<div id="693a51c5" class="cell" data-execution_count="2">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>mean_male <span class="op">=</span> sex_income.iloc[<span class="dv">1</span>,<span class="dv">1</span>]</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>mean_female <span class="op">=</span> sex_income.iloc[<span class="dv">0</span>,<span class="dv">1</span>]</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'mean male: '</span>, mean_male)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>mean male:  349.03757099169945</code></pre>
-</div>
-</div>
-<div id="97023767" class="cell" data-execution_count="3">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'mean female: '</span>, mean_female)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>mean female:  186.29309576837417</code></pre>
-</div>
-</div>
-<div id="4e386a01" class="cell" data-execution_count="4">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>std_income <span class="op">=</span> welfare.dropna(subset <span class="op">=</span> <span class="st">'income'</span>)<span class="op">\</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>                    .groupby(<span class="st">'sex'</span>, as_index <span class="op">=</span> <span class="va">False</span>)<span class="op">\</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>                    .agg(std_income <span class="op">=</span> (<span class="st">'income'</span>, <span class="st">'std'</span>))</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>std_male <span class="op">=</span> std_income.iloc[<span class="dv">1</span>,<span class="dv">1</span>]</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>std_female <span class="op">=</span> std_income.iloc[<span class="dv">0</span>,<span class="dv">1</span>]</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'std. male: '</span>, std_male)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>std. male:  217.86225435930135</code></pre>
-</div>
-</div>
-<div id="5273438b" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'std. female:'</span>, std_female)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>std. female: 132.05740180730666</code></pre>
-</div>
-</div>
-</section>
-<section id="신뢰구간-구하기" class="level1">
-<h1>신뢰구간 구하기</h1>
-<div id="b1b2c578" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>z_0025 <span class="op">=</span> norm.ppf(<span class="fl">0.975</span>, loc<span class="op">=</span><span class="dv">0</span>, scale<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>n_male <span class="op">=</span> welfare.dropna(subset <span class="op">=</span> <span class="st">'income'</span>).query(<span class="st">"sex=='male'"</span>)[<span class="st">'income'</span>].count()</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>n_female <span class="op">=</span> welfare.dropna(subset <span class="op">=</span> <span class="st">'income'</span>).query(<span class="st">"sex=='female'"</span>)[<span class="st">'income'</span>].count()</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>ci_male1 <span class="op">=</span> mean_male <span class="op">+</span> z_0025 <span class="op">*</span> std_male<span class="op">/</span>np.sqrt(n_male)</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>ci_male2 <span class="op">=</span> mean_male <span class="op">-</span> z_0025 <span class="op">*</span> std_male<span class="op">/</span>np.sqrt(n_male)</span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>ci_female1 <span class="op">=</span> mean_female <span class="op">+</span> z_0025 <span class="op">*</span> std_female<span class="op">/</span>np.sqrt(n_female)</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>ci_female2 <span class="op">=</span> mean_female <span class="op">-</span> z_0025 <span class="op">*</span> std_female<span class="op">/</span>np.sqrt(n_female)</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>ci_male1</span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>ci_male2</span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'c.i.male upper: '</span>, ci_male1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>c.i.male upper:  357.96254968365116</code></pre>
-</div>
-</div>
-<div id="9b3187fa" class="cell" data-execution_count="7">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'c.i.male lower: '</span>, ci_male2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>c.i.male lower:  340.11259229974775</code></pre>
-</div>
-</div>
-<div id="34802779" class="cell" data-execution_count="8">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'c.i.female upper: '</span>, ci_female1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>c.i.female upper:  191.7557368532799</code></pre>
-</div>
-</div>
-<div id="4b399af3" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'c.i.female lower: '</span>, ci_female1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>c.i.female lower:  191.7557368532799</code></pre>
-</div>
-</div>
-</section>
-<section id="그래프-그리기" class="level1">
-<h1>그래프 그리기</h1>
-<div id="8351ad95" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>sns.barplot(data <span class="op">=</span> sex_income, x <span class="op">=</span> <span class="st">'sex'</span>, y <span class="op">=</span> <span class="st">'mean_income'</span>, hue <span class="op">=</span> <span class="st">'sex'</span>)</span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>plt.plot([<span class="dv">0</span>,<span class="dv">0</span>], [ci_female1 , ci_female2], color<span class="op">=</span><span class="st">'r'</span>)</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>plt.plot([<span class="dv">1</span>,<span class="dv">1</span>], [ci_male1 , ci_male2], color<span class="op">=</span><span class="st">'r'</span>)</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>plt.clf()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="index_files/figure-html/cell-11-output-1.png" width="593" height="429" class="figure-img"></p>
-</figure>
-</div>
-</div>
-<div class="cell-output cell-output-display">
-<pre><code>&lt;Figure size 672x480 with 0 Axes&gt;</code></pre>
-</div>
-</div>
+<section id="작품도" class="level2">
+<h2 class="anchored" data-anchor-id="작품도">작품도</h2>
+<p><img src="PET_project.png" class="img-fluid"></p>
 
 
 </section>

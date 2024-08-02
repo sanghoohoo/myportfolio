@@ -3,7 +3,7 @@ title: "계절별 화재발생 빈도 및 요인 분석"
 author: "명예소방관 시켜조🚒 : 안상후, 오서연, 김주영, 김재희"
 format: html
 editor: visual
-categories: [LS bigdata]
+categories: [project]
 jupyter: python3
 ---
 
@@ -20,7 +20,7 @@ jupyter: python3
 ```{python}
 import pandas as pd
 import numpy as np
-df = pd.read_csv("../data/fire.csv")
+df = pd.read_csv("fire.csv")
 df.head()
 ```
 
@@ -300,7 +300,7 @@ plt.clf()
 ### <데이터 설명>
 
 ```{python}
-damage = pd.read_csv("../data/di.csv")
+damage = pd.read_csv("di.csv")
 damage
 
 ```

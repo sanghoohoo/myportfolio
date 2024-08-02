@@ -2,7 +2,7 @@
 title: "HW1"
 author: 'Sanghoo Ahn'
 date: '2024-07-12'
-categories: [bigdata]
+categories: [Homework]
 jupyter: python3
 ---
 

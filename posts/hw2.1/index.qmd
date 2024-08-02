@@ -2,7 +2,7 @@
 title: "HW2.1"
 author: 'Sanghoo Ahn'
 date: '2024-07-22'
-categories: [bigdata]
+categories: [Homework]
 jupyter: python3
 ---
 ## plotly를 활용한 인터랙티브 시각화
