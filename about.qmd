@@ -3,7 +3,7 @@ title: "About"
 jupyter: python3
 ---
 
-![](KNU.jpg)
+![](KNU.jpg){ width=50% }
   
 ## Summary
 
