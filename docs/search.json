@@ -339,8 +339,8 @@
     "objectID": "about.html#summary",
     "href": "about.html#summary",
     "title": "About",
-    "section": "",
-    "text": "Passionate Electrical Engineering student with a strong foundation in electrical and electronic engineering, specializing in power systems and electronic circuit design."
+    "section": "Summary",
+    "text": "Summary\nPassionate Electrical Engineering student with a strong foundation in electrical and electronic engineering, specializing in power systems and electronic circuit design."
   },
   {
     "objectID": "about.html#certificates-other-skills",
@@ -361,6 +361,6 @@
     "href": "projects/PET_project/PET_project.html#작품도",
     "title": "All In One PET 수거기",
     "section": "작품도",
-    "text": "작품도\n\n\n\n작품도"
+    "text": "작품도"
   }
 ]
