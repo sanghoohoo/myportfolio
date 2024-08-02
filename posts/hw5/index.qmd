@@ -15,7 +15,7 @@ import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-raw_welfare = pd.read_spss('C:/Users/USER/Documents/LS빅데이터스쿨/myportfolio/data/Koweps_hpwc14_2019_beta2.sav')
+raw_welfare = pd.read_spss('../../data/Koweps_hpwc14_2019_beta2.sav')
 welfare=raw_welfare.copy()
 
 welfare = welfare.rename(

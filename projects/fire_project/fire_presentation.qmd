@@ -20,7 +20,7 @@ jupyter: python3
 ```{python}
 import pandas as pd
 import numpy as np
-df = pd.read_csv("C:/Users/USER/Documents/LS빅데이터스쿨/myportfolio/projects/data/fire.csv")
+df = pd.read_csv("../data/fire.csv")
 df.head()
 ```
 
@@ -300,7 +300,7 @@ plt.clf()
 ### <데이터 설명>
 
 ```{python}
-damage = pd.read_csv("C:/Users/USER/Documents/LS빅데이터스쿨/myportfolio/projects/data/di.csv")
+damage = pd.read_csv("../data/di.csv")
 damage
 
 ```
