@@ -2,9 +2,8 @@
 title: "HW2"
 author: 'Sanghoo Ahn'
 date: '2024-07-16'
-categories: [bigdata]
+categories: [Homework]
 jupyter: python3
-theme: dark
 ---
 ## mpg 데이터를 이용해 분석 문제를 해결해 보세요. (p.144)
 
@@ -13,7 +12,7 @@ theme: dark
 ```{python}
 import pandas as pd
 import numpy as np
-mpg=pd.read_csv('C:/Users/USER/Documents/LS빅데이터스쿨/myportfolio/data/mpg.csv')
+mpg=pd.read_csv('../../data/mpg.csv')
 mpg_l=mpg.query('displ<=4')
 mpg_h=mpg.query('displ>=5')
 mpg_l['hwy'].mean()

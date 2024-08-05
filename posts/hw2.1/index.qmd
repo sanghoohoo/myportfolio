@@ -2,7 +2,7 @@
 title: "HW2.1"
 author: 'Sanghoo Ahn'
 date: '2024-07-22'
-categories: [bigdata]
+categories: [Homework]
 jupyter: python3
 ---
 ## plotly를 활용한 인터랙티브 시각화
@@ -12,7 +12,7 @@ jupyter: python3
 ```{python}
 import pandas as pd
 import plotly.express as px
-exam=pd.read_csv('C:/Users/USER/Documents/LS빅데이터스쿨/myportfolio/data/exam.csv')
+exam=pd.read_csv('../../data/exam.csv')
 exam
 ```
 

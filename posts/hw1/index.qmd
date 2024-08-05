@@ -2,7 +2,7 @@
 title: "HW1"
 author: 'Sanghoo Ahn'
 date: '2024-07-12'
-categories: [bigdata]
+categories: [Homework]
 jupyter: python3
 ---
 
@@ -22,7 +22,7 @@ print(df)
 **mpg데이터 변수명 변경 (p.115)**
 
 ```{python}
-mpg=pd.read_csv('C:/Users/USER/Documents/LS빅데이터스쿨/myportfolio/data/mpg.csv')
+mpg=pd.read_csv('../../data/mpg.csv')
 mpg_new=mpg.copy()
 mpg_new=mpg_new.rename(columns={'cty':'city'})
 mpg_new=mpg_new.rename(columns={'hwy':'highway'})
@@ -33,7 +33,7 @@ print(mpg_new)
 **midway.csv를 불러와 데이터의 특징을 파악하세요. (p.130)**
 
 ```{python}
-mdw=pd.read_csv('C:/Users/USER/Documents/LS빅데이터스쿨/myportfolio/data/midwest.csv')
+mdw=pd.read_csv('../../data/midwest.csv')
 mdw.describe()
 ```
 

@@ -18,13 +18,18 @@
   {
     "listing": "/project_blog.html",
     "items": [
-      "/projects/fire_project/fire_presentation.html"
+      "/projects/fire_project/fire_presentation.html",
+      "/projects/PET_project/PET_project.html"
     ]
   },
   {
     "listing": "/lsbigdata_blog.html",
     "items": [
+<<<<<<< HEAD
       "/posts/hw6/index.html",
+=======
+      "/posts/fire_project/fire_presentation.html",
+>>>>>>> 98bebdbb04c13efb889ddd1bcdd2d65d7e1d728e
       "/posts/hw2.1/index.html",
       "/posts/hw2.2/index.html",
       "/posts/hw3/index.html",
@@ -32,6 +37,12 @@
       "/posts/hw5/index.html",
       "/posts/hw2/index.html",
       "/posts/hw1/index.html"
+    ]
+  },
+  {
+    "listing": "/KNU_blog.html",
+    "items": [
+      "/KNU/PET_project/PET_project.html"
     ]
   }
 ]

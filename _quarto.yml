@@ -12,8 +12,8 @@ website:
         text: About
       - href: lsbigdata_blog.qmd
         text: LS bigdata
-      - href: project_blog.qmd
-        text: Project
+      - href: KNU_blog.qmd
+        text: KNU
 
 format:
   html:
