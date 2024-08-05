@@ -305,7 +305,7 @@
     "href": "lsbigdata_blog.html",
     "title": "LS bigdata",
     "section": "",
-    "text": "HW2.1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nSanghoo Ahn\n\n\n\n\n\n\n\n\n\n\n\n\nHW2.2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nSanghoo Ahn\n\n\n\n\n\n\n\n\n\n\n\n\nHW3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nSanghoo Ahn\n\n\n\n\n\n\n\n\n\n\n\n\nHW4\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nSanghoo Ahn\n\n\n\n\n\n\n\n\n\n\n\n\nHW5\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nSanghoo Ahn\n\n\n\n\n\n\n\n\n\n\n\n\nHW2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\nSanghoo Ahn\n\n\n\n\n\n\n\n\n\n\n\n\nHW1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 12, 2024\n\n\nSanghoo Ahn\n\n\n\n\n\n\nNo matching items"
+    "text": "HW6\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nAug 5, 2024\n\n\nSanghoo Ahn\n\n\n\n\n\n\n\n\n\n\n\n\nHW2.1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nSanghoo Ahn\n\n\n\n\n\n\n\n\n\n\n\n\nHW2.2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nSanghoo Ahn\n\n\n\n\n\n\n\n\n\n\n\n\nHW3\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nSanghoo Ahn\n\n\n\n\n\n\n\n\n\n\n\n\nHW4\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nSanghoo Ahn\n\n\n\n\n\n\n\n\n\n\n\n\nHW5\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 22, 2024\n\n\nSanghoo Ahn\n\n\n\n\n\n\n\n\n\n\n\n\nHW2\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 16, 2024\n\n\nSanghoo Ahn\n\n\n\n\n\n\n\n\n\n\n\n\nHW1\n\n\n\n\n\n\nbigdata\n\n\n\n\n\n\n\n\n\nJul 12, 2024\n\n\nSanghoo Ahn\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html#education",
@@ -341,5 +341,33 @@
     "title": "About",
     "section": "",
     "text": "Passionate Electrical Engineering student with a strong foundation in electrical and electronic engineering, specializing in power systems and electronic circuit design."
+  },
+  {
+    "objectID": "posts/hw5.1/index.html",
+    "href": "posts/hw5.1/index.html",
+    "title": "HW5.1",
+    "section": "",
+    "text": "슬통 자동차는 매해 출시되는 신형 자동차의 에너지 소비효율 등급을 1등급으로 유지하고 있다. 22년 개발된 신형 모델이 한국 자동차 평가원에서 설정한 에너지 소비 효율등급 1등급을 받을 수 있을지 검정하려한다. 평가원에 따르면 1등급의 기준은 평균 복합 에너지 소비효율이 16.0 이상인 경우 부여한다고 한다.\n다음은 신형 자동차 15대의 복합 에너지소비효율 측정한 결과이다.\n5.078, 15.752, 15.549, 15.56, 16.098, 13.277, 15.462, 16.116, 15.214, 16.93, 14.118, 14.927, 15.382, 16.709, 16.804\n표본에 의하여 판단해볼때, 현대자동차의 신형 모델은 에너지 효율 1등급으로 판단할 수 있을지 판단해보시오. (유의수준 1%로 설정)\n\n검정을 위한 가설을 명확하게 서술하시오.\n\n\nH_0 : mu&gt;=16\nH_A : mu&lt;16\n\n\n검정통계량 계산하시오.\n\n\nfrom scipy.stats import norm\nimport numpy as np\n\neff = np.array([15.078, 15.752, 15.549, 15.56, 16.098, 13.277, 15.462, 16.116, 15.214, 16.93, 14.118, 14.927, 15.382, 16.709, 16.804])\n\nx_bar=eff.mean()\ns=np.std(eff, ddof=1)\nn=len(eff)\n\nt=(x_bar-16)/(s/np.sqrt(n))\nprint('t = ',t)\n\nt =  -1.8500447456376756\n\n\n\np‑value을 구하세요.\n\n\nfrom scipy.stats import t\np_val =t.cdf(-1.85, df=n-1)\nprint('p_val = ',p_val) # 유의수준 0.01보다 큼\n\np_val =  0.0427658180508888\n\n\n\n현대자동차의 신형 모델의 평균 복합 에너지 소비효율에 대하여 95% 신뢰구간을 구해보세요.\n\n\nz_0025 = t.ppf(0.975, df=n-1)\n\nl_ci = x_bar - z_0025 * s/np.sqrt(n)\nr_ci = x_bar + z_0025 * s/np.sqrt(n)\nprint('l_ci = ',l_ci)\n\nl_ci =  14.988864240339733\n\n\n\nprint('r_ci = ',r_ci)\n\nr_ci =  16.074602426326933"
+  },
+  {
+    "objectID": "posts/hw5.1/index.html#신형-자동차의-에너지-소비효율-등급",
+    "href": "posts/hw5.1/index.html#신형-자동차의-에너지-소비효율-등급",
+    "title": "HW5.1",
+    "section": "",
+    "text": "슬통 자동차는 매해 출시되는 신형 자동차의 에너지 소비효율 등급을 1등급으로 유지하고 있다. 22년 개발된 신형 모델이 한국 자동차 평가원에서 설정한 에너지 소비 효율등급 1등급을 받을 수 있을지 검정하려한다. 평가원에 따르면 1등급의 기준은 평균 복합 에너지 소비효율이 16.0 이상인 경우 부여한다고 한다.\n다음은 신형 자동차 15대의 복합 에너지소비효율 측정한 결과이다.\n5.078, 15.752, 15.549, 15.56, 16.098, 13.277, 15.462, 16.116, 15.214, 16.93, 14.118, 14.927, 15.382, 16.709, 16.804\n표본에 의하여 판단해볼때, 현대자동차의 신형 모델은 에너지 효율 1등급으로 판단할 수 있을지 판단해보시오. (유의수준 1%로 설정)\n\n검정을 위한 가설을 명확하게 서술하시오.\n\n\nH_0 : mu&gt;=16\nH_A : mu&lt;16\n\n\n검정통계량 계산하시오.\n\n\nfrom scipy.stats import norm\nimport numpy as np\n\neff = np.array([15.078, 15.752, 15.549, 15.56, 16.098, 13.277, 15.462, 16.116, 15.214, 16.93, 14.118, 14.927, 15.382, 16.709, 16.804])\n\nx_bar=eff.mean()\ns=np.std(eff, ddof=1)\nn=len(eff)\n\nt=(x_bar-16)/(s/np.sqrt(n))\nprint('t = ',t)\n\nt =  -1.8500447456376756\n\n\n\np‑value을 구하세요.\n\n\nfrom scipy.stats import t\np_val =t.cdf(-1.85, df=n-1)\nprint('p_val = ',p_val) # 유의수준 0.01보다 큼\n\np_val =  0.0427658180508888\n\n\n\n현대자동차의 신형 모델의 평균 복합 에너지 소비효율에 대하여 95% 신뢰구간을 구해보세요.\n\n\nz_0025 = t.ppf(0.975, df=n-1)\n\nl_ci = x_bar - z_0025 * s/np.sqrt(n)\nr_ci = x_bar + z_0025 * s/np.sqrt(n)\nprint('l_ci = ',l_ci)\n\nl_ci =  14.988864240339733\n\n\n\nprint('r_ci = ',r_ci)\n\nr_ci =  16.074602426326933"
+  },
+  {
+    "objectID": "posts/hw6/index.html",
+    "href": "posts/hw6/index.html",
+    "title": "HW6",
+    "section": "",
+    "text": "슬통 자동차는 매해 출시되는 신형 자동차의 에너지 소비효율 등급을 1등급으로 유지하고 있다. 22년 개발된 신형 모델이 한국 자동차 평가원에서 설정한 에너지 소비 효율등급 1등급을 받을 수 있을지 검정하려한다. 평가원에 따르면 1등급의 기준은 평균 복합 에너지 소비효율이 16.0 이상인 경우 부여한다고 한다.\n다음은 신형 자동차 15대의 복합 에너지소비효율 측정한 결과이다.\n5.078, 15.752, 15.549, 15.56, 16.098, 13.277, 15.462, 16.116, 15.214, 16.93, 14.118, 14.927, 15.382, 16.709, 16.804\n표본에 의하여 판단해볼때, 현대자동차의 신형 모델은 에너지 효율 1등급으로 판단할 수 있을지 판단해보시오. (유의수준 1%로 설정)\n\n검정을 위한 가설을 명확하게 서술하시오.\n\n\nH_0 : mu&gt;=16\nH_A : mu&lt;16\n\n\n검정통계량 계산하시오.\n\n\nfrom scipy.stats import norm\nimport numpy as np\n\neff = np.array([15.078, 15.752, 15.549, 15.56, 16.098, 13.277, 15.462, 16.116, 15.214, 16.93, 14.118, 14.927, 15.382, 16.709, 16.804])\n\nx_bar=eff.mean()\ns=np.std(eff, ddof=1)\nn=len(eff)\n\nt=(x_bar-16)/(s/np.sqrt(n))\nprint('t = ',t)\n\nt =  -1.8500447456376756\n\n\n\np‑value을 구하세요.\n\n\nfrom scipy.stats import t\np_val =t.cdf(-1.85, df=n-1)\nprint('p_val = ',p_val) # 유의수준 0.01보다 큼\n\np_val =  0.0427658180508888\n\n\n\n현대자동차의 신형 모델의 평균 복합 에너지 소비효율에 대하여 95% 신뢰구간을 구해보세요.\n\n\nz_0025 = t.ppf(0.975, df=n-1)\n\nl_ci = x_bar - z_0025 * s/np.sqrt(n)\nr_ci = x_bar + z_0025 * s/np.sqrt(n)\nprint('l_ci = ',l_ci)\n\nl_ci =  14.988864240339733\n\n\n\nprint('r_ci = ',r_ci)\n\nr_ci =  16.074602426326933"
+  },
+  {
+    "objectID": "posts/hw6/index.html#신형-자동차의-에너지-소비효율-등급",
+    "href": "posts/hw6/index.html#신형-자동차의-에너지-소비효율-등급",
+    "title": "HW6",
+    "section": "",
+    "text": "슬통 자동차는 매해 출시되는 신형 자동차의 에너지 소비효율 등급을 1등급으로 유지하고 있다. 22년 개발된 신형 모델이 한국 자동차 평가원에서 설정한 에너지 소비 효율등급 1등급을 받을 수 있을지 검정하려한다. 평가원에 따르면 1등급의 기준은 평균 복합 에너지 소비효율이 16.0 이상인 경우 부여한다고 한다.\n다음은 신형 자동차 15대의 복합 에너지소비효율 측정한 결과이다.\n5.078, 15.752, 15.549, 15.56, 16.098, 13.277, 15.462, 16.116, 15.214, 16.93, 14.118, 14.927, 15.382, 16.709, 16.804\n표본에 의하여 판단해볼때, 현대자동차의 신형 모델은 에너지 효율 1등급으로 판단할 수 있을지 판단해보시오. (유의수준 1%로 설정)\n\n검정을 위한 가설을 명확하게 서술하시오.\n\n\nH_0 : mu&gt;=16\nH_A : mu&lt;16\n\n\n검정통계량 계산하시오.\n\n\nfrom scipy.stats import norm\nimport numpy as np\n\neff = np.array([15.078, 15.752, 15.549, 15.56, 16.098, 13.277, 15.462, 16.116, 15.214, 16.93, 14.118, 14.927, 15.382, 16.709, 16.804])\n\nx_bar=eff.mean()\ns=np.std(eff, ddof=1)\nn=len(eff)\n\nt=(x_bar-16)/(s/np.sqrt(n))\nprint('t = ',t)\n\nt =  -1.8500447456376756\n\n\n\np‑value을 구하세요.\n\n\nfrom scipy.stats import t\np_val =t.cdf(-1.85, df=n-1)\nprint('p_val = ',p_val) # 유의수준 0.01보다 큼\n\np_val =  0.0427658180508888\n\n\n\n현대자동차의 신형 모델의 평균 복합 에너지 소비효율에 대하여 95% 신뢰구간을 구해보세요.\n\n\nz_0025 = t.ppf(0.975, df=n-1)\n\nl_ci = x_bar - z_0025 * s/np.sqrt(n)\nr_ci = x_bar + z_0025 * s/np.sqrt(n)\nprint('l_ci = ',l_ci)\n\nl_ci =  14.988864240339733\n\n\n\nprint('r_ci = ',r_ci)\n\nr_ci =  16.074602426326933"
   }
 ]
