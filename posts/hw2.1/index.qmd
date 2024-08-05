@@ -1,7 +1,7 @@
 ---
 title: "HW2.1"
 author: 'Sanghoo Ahn'
-date: '2024-07-22'
+date: '2024-07-17'
 categories: [Homework]
 jupyter: python3
 ---
