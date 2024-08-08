@@ -1,8 +1,16 @@
 [
   {
-    "listing": "/KNU_blog.html",
+    "listing": "/posts/index.html",
     "items": [
-      "/KNU/PET_project/PET_project.html"
+      "/posts/hw6/index.html",
+      "/posts/fire_project/fire_presentation.html",
+      "/posts/hw5/index.html",
+      "/posts/hw4/index.html",
+      "/posts/hw3/index.html",
+      "/posts/hw2.2/index.html",
+      "/posts/hw2.1/index.html",
+      "/posts/hw2/index.html",
+      "/posts/hw1/index.html"
     ]
   },
   {
@@ -21,17 +29,9 @@
     ]
   },
   {
-    "listing": "/posts/index.html",
+    "listing": "/KNU_blog.html",
     "items": [
-      "/posts/hw6/index.html",
-      "/posts/fire_project/fire_presentation.html",
-      "/posts/hw5/index.html",
-      "/posts/hw4/index.html",
-      "/posts/hw3/index.html",
-      "/posts/hw2.2/index.html",
-      "/posts/hw2.1/index.html",
-      "/posts/hw2/index.html",
-      "/posts/hw1/index.html"
+      "/KNU/PET_project/PET_project.html"
     ]
   }
 ]
