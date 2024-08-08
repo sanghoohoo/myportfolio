@@ -75,10 +75,14 @@ asian_counts.plot.bar(rot=0)
 plt.show()
 ```
 
-
-<form id="comment-form">
+  
+  <form id="comment-form">
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+    
     <label for="comment">Leave a Comment:</label><br>
-    <textarea id="comment" name="comment" rows="4" cols="50"></textarea><br>
+    <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br><br>
+    
     <input type="submit" value="Submit">
 </form>
 
@@ -87,10 +91,22 @@ plt.show()
 </div>
 
 <script>
-document.getElementById('comment-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    var comment = document.getElementById('comment').value;
-    // 댓글을 서버에 저장하는 코드 추가
-    document.getElementById('comments-section').innerHTML += '<p>' + comment + '</p>';
-    document.getElementById('comment').value = ''; // 폼 초기화
-});
+    // Function to handle form submission
+    document.getElementById('comment-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        var name = document.getElementById('name').value;
+        var commentText = document.getElementById('comment').value;
+
+        // Display the new comment
+        var commentHTML = `
+            <div class="comment">
+                <p><strong>${name}</strong> says:</p>
+                <p>${commentText}</p>
+            </div>
+        `;
+        document.getElementById('comments-section').innerHTML += commentHTML;
+        document.getElementById('name').value = ''; // Clear the name input
+        document.getElementById('comment').value = ''; // Clear the textarea
+    });
+</script>

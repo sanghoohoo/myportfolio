@@ -195,7 +195,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p><strong>다음 표의 내용을 데이터 프레임으로 만들어 출력해 보세요. (p.85)</strong></p>
-<div id="465ef75e" class="cell" data-execution_count="1">
+<div id="1450a9a3" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df<span class="op">=</span>pd.DataFrame({</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'제품'</span>:[<span class="st">'사과'</span>,<span class="st">'딸기'</span>,<span class="st">'수박'</span>],</span>
@@ -211,7 +211,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p><strong>mpg데이터 변수명 변경 (p.115)</strong></p>
-<div id="cfdf5575" class="cell" data-execution_count="2">
+<div id="c5a5a32e" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>mpg<span class="op">=</span>pd.read_csv(<span class="st">'../../data/mpg.csv'</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>mpg_new<span class="op">=</span>mpg.copy()</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>mpg_new<span class="op">=</span>mpg_new.rename(columns<span class="op">=</span>{<span class="st">'cty'</span>:<span class="st">'city'</span>})</span>
@@ -248,7 +248,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p><strong>midway.csv를 불러와 데이터의 특징을 파악하세요. (p.130)</strong></p>
-<div id="cdbbef79" class="cell" data-execution_count="3">
+<div id="b02f33f0" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>mdw<span class="op">=</span>pd.read_csv(<span class="st">'../../data/midwest.csv'</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>mdw.describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
@@ -483,7 +483,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p><strong>poptotal(전체 인구) 변수를 total로, popasian(아시아 인구) 변수를 asian으로 수정하세요.</strong></p>
-<div id="748a6282" class="cell" data-execution_count="4">
+<div id="c09bfcba" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>mdw<span class="op">=</span>mdw.rename(columns<span class="op">=</span>{<span class="st">'poptotal'</span>:<span class="st">'total'</span>})</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>mdw<span class="op">=</span>mdw.rename(columns<span class="op">=</span>{<span class="st">'popasian'</span>:<span class="st">'asian'</span>})</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mdw[[<span class="st">'total'</span>,<span class="st">'asian'</span>]])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -505,7 +505,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p><strong>total,asian 변수를 이용해 ‘전체 인구 대비 아시아 인구 백분율’ 파생변수를 추가하고, 히스토그램을 만들어 분포를 살펴보세요.</strong></p>
-<div id="1c3ea0d0" class="cell" data-execution_count="5">
+<div id="ecbc7204" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>mdw[<span class="st">'per_asian'</span>]<span class="op">=</span>mdw[<span class="st">'asian'</span>]<span class="op">/</span>mdw[<span class="st">'total'</span>]<span class="op">*</span><span class="dv">100</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(mdw)</span>
@@ -575,7 +575,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p><strong>아시아 인구 백분율 전체 평균을 구하고, 평균을 초과하면 ‘Large’, 그 외에는 ’Small’을 부여한 파생변수를 만들어 보세요.</strong></p>
-<div id="e7960c75" class="cell" data-execution_count="6">
+<div id="4439c605" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>avg_asian<span class="op">=</span>mdw[<span class="st">'per_asian'</span>].mean()</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>mdw[<span class="st">'amo_asian'</span>]<span class="op">=</span>np.where((mdw[<span class="st">'per_asian'</span>]<span class="op">&gt;</span>avg_asian),<span class="st">'Large'</span>,<span class="st">'Small'</span>)</span>
@@ -637,7 +637,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p><strong>’Large’와 ’Small’에 해당하는 지역이 얼마나 많은지 빈도표와 빈도 막대 그래프를 만들어 확인해 보세요.</strong></p>
-<div id="541e52a4" class="cell" data-execution_count="7">
+<div id="5c29bf63" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>plt.clf()</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>asian_counts<span class="op">=</span>mdw[<span class="st">'amo_asian'</span>].value_counts()</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(asian_counts)</span>
@@ -658,28 +658,40 @@ Name: count, dtype: int64</code></pre>
 </div>
 </div>
 <form id="comment-form">
+<p><label for="name">Name:</label><br> <input type="text" id="name" name="name" required=""><br><br></p>
 <label for="comment">Leave a Comment:</label><br>
-<textarea id="comment" name="comment" rows="4" cols="50"></textarea>
-<br> <input type="submit" value="Submit">
+<textarea id="comment" name="comment" rows="4" cols="50" required=""></textarea>
+<p><br><br></p>
+<input type="submit" value="Submit">
 </form>
 <div id="comments-section">
 
 </div>
 <script>
-document.getElementById(‘comment-form’).addEventListener(‘submit’, function(e) { e.preventDefault(); var comment = document.getElementById(‘comment’).value; // 댓글을 서버에 저장하는 코드 추가 document.getElementById(‘comments-section’).innerHTML += ’
-<p>
-’ + comment + ’
-</p>
-<p>‘; document.getElementById(’comment’).value = ’’; // 폼 초기화 });</p>
-<div id="quarto-navigation-envelope" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar-title">Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar-title">Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:Home">Home</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:/index.html">/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:About">About</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:/about.html">/about.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:LS bigdata">LS bigdata</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:/lsbigdata_blog.html">/lsbigdata_blog.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:KNU">KNU</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:/KNU_blog.html">/KNU_blog.html</span></p>
-</div>
-<div id="quarto-meta-markdown" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-metatitle">HW1 – Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-twittercardtitle">HW1 – Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-ogcardtitle">HW1 – Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-metasitename">Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-twittercarddesc"></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-ogcardddesc"></span></p>
-</div>
+    // Function to handle form submission
+    document.getElementById('comment-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        var name = document.getElementById('name').value;
+        var commentText = document.getElementById('comment').value;
+
+        // Display the new comment
+        var commentHTML = `
+            <div class="comment">
+                <p><strong>${name}</strong> says:</p>
+                <p>${commentText}</p>
+            </div>
+        `;
+        document.getElementById('comments-section').innerHTML += commentHTML;
+        document.getElementById('name').value = ''; // Clear the name input
+        document.getElementById('comment').value = ''; // Clear the textarea
+    });
+</script>
+
+
 
 </main> <!-- /main -->
-<script id = "quarto-html-after-body" type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1099,7 +1111,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-</main></div> <!-- /content -->
+</div> <!-- /content -->
 
 
 

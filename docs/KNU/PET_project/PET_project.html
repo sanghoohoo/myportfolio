@@ -171,29 +171,41 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="작품도">작품도</h2>
 <p><img src="PET_project.png" class="img-fluid"></p>
 <form id="comment-form">
+<p><label for="name">Name:</label><br> <input type="text" id="name" name="name" required=""><br><br></p>
 <label for="comment">Leave a Comment:</label><br>
-<textarea id="comment" name="comment" rows="4" cols="50"></textarea>
-<br> <input type="submit" value="Submit">
+<textarea id="comment" name="comment" rows="4" cols="50" required=""></textarea>
+<p><br><br></p>
+<input type="submit" value="Submit">
 </form>
 <div id="comments-section">
 
 </div>
 <script>
-document.getElementById(‘comment-form’).addEventListener(‘submit’, function(e) { e.preventDefault(); var comment = document.getElementById(‘comment’).value; // 댓글을 서버에 저장하는 코드 추가 document.getElementById(‘comments-section’).innerHTML += ’
-<p>
-’ + comment + ’
-</p>
-<p>‘; document.getElementById(’comment’).value = ’’; // 폼 초기화 });</p>
-<div id="quarto-navigation-envelope" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar-title">Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar-title">Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:Home">Home</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:/index.html">/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:About">About</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:/about.html">/about.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:LS bigdata">LS bigdata</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:/lsbigdata_blog.html">/lsbigdata_blog.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:KNU">KNU</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:/KNU_blog.html">/KNU_blog.html</span></p>
-</div>
-<div id="quarto-meta-markdown" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-metatitle">All In One PET 수거기 – Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-twittercardtitle">All In One PET 수거기 – Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-ogcardtitle">All In One PET 수거기 – Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-metasitename">Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-twittercarddesc"></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-ogcardddesc"></span></p>
-</div>
+    // Function to handle form submission
+    document.getElementById('comment-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        var name = document.getElementById('name').value;
+        var commentText = document.getElementById('comment').value;
+
+        // Display the new comment
+        var commentHTML = `
+            <div class="comment">
+                <p><strong>${name}</strong> says:</p>
+                <p>${commentText}</p>
+            </div>
+        `;
+        document.getElementById('comments-section').innerHTML += commentHTML;
+        document.getElementById('name').value = ''; // Clear the name input
+        document.getElementById('comment').value = ''; // Clear the textarea
+    });
+</script>
+
+
 </section>
 
 </main> <!-- /main -->
-<script id = "quarto-html-after-body" type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -613,7 +625,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-</section></main></div> <!-- /content -->
+</div> <!-- /content -->
 
 
 

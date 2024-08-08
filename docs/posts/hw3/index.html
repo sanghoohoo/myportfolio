@@ -202,7 +202,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="문제-1" class="level1">
 <h1>문제 1</h1>
 <p><strong>정규분포 pdf 값을 계산하는 자신만의 파이썬 함수를 정의하고, 정규분포 mu = 3, sigma = 2 의 pdf를 그릴 것.</strong></p>
-<div id="1e4e427f" class="cell" data-execution_count="1">
+<div id="1d6df93e" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
@@ -238,7 +238,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>P(X &lt; 3)</li>
 </ol></li>
 </ul>
-<div id="f00b2420" class="cell" data-execution_count="2">
+<div id="65c7778e" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>norm.cdf(<span class="dv">3</span>, loc<span class="op">=</span><span class="dv">2</span>, scale<span class="op">=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="2">
 <pre><code>np.float64(0.6305586598182363)</code></pre>
@@ -249,7 +249,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>P(2 &lt; X &lt; 5)</li>
 </ol></li>
 </ul>
-<div id="97864bed" class="cell" data-execution_count="3">
+<div id="6d1565d9" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>norm.cdf(<span class="dv">5</span>, loc<span class="op">=</span><span class="dv">2</span>, scale<span class="op">=</span><span class="dv">3</span>)<span class="op">-</span>norm.cdf(<span class="dv">2</span>, loc<span class="op">=</span><span class="dv">2</span>, scale<span class="op">=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>np.float64(0.3413447460685429)</code></pre>
@@ -260,7 +260,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>P(X &lt; 3 or X &gt; 7)</li>
 </ol></li>
 </ul>
-<div id="dc92338c" class="cell" data-execution_count="4">
+<div id="8a37a542" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>norm.cdf(<span class="dv">3</span>, loc<span class="op">=</span><span class="dv">2</span>, scale<span class="op">=</span><span class="dv">3</span>)<span class="op">+</span><span class="dv">1</span><span class="op">-</span>norm.cdf(<span class="dv">7</span>, loc<span class="op">=</span><span class="dv">2</span>, scale<span class="op">=</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>np.float64(0.6783490120910509)</code></pre>
@@ -270,7 +270,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="문제-3" class="level1">
 <h1>문제 3</h1>
 <p><strong>LS 빅데이터 스쿨 학생들의 중간고사 점수는 평균이 30이고, 분산이 4인 정규분포를 따른다. 상위 5%에 해당하는 학생의 점수는?</strong></p>
-<div id="d6903e03" class="cell" data-execution_count="5">
+<div id="ac755b4a" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>score<span class="op">=</span>norm.ppf(<span class="fl">0.95</span>, loc<span class="op">=</span><span class="dv">30</span>, scale<span class="op">=</span><span class="dv">2</span>)</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(score)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -278,29 +278,41 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <form id="comment-form">
+<p><label for="name">Name:</label><br> <input type="text" id="name" name="name" required=""><br><br></p>
 <label for="comment">Leave a Comment:</label><br>
-<textarea id="comment" name="comment" rows="4" cols="50"></textarea>
-<br> <input type="submit" value="Submit">
+<textarea id="comment" name="comment" rows="4" cols="50" required=""></textarea>
+<p><br><br></p>
+<input type="submit" value="Submit">
 </form>
 <div id="comments-section">
 
 </div>
 <script>
-document.getElementById(‘comment-form’).addEventListener(‘submit’, function(e) { e.preventDefault(); var comment = document.getElementById(‘comment’).value; // 댓글을 서버에 저장하는 코드 추가 document.getElementById(‘comments-section’).innerHTML += ’
-<p>
-’ + comment + ’
-</p>
-<p>‘; document.getElementById(’comment’).value = ’’; // 폼 초기화 });</p>
-<div id="quarto-navigation-envelope" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar-title">Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar-title">Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:Home">Home</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:/index.html">/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:About">About</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:/about.html">/about.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:LS bigdata">LS bigdata</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:/lsbigdata_blog.html">/lsbigdata_blog.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:KNU">KNU</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:/KNU_blog.html">/KNU_blog.html</span></p>
-</div>
-<div id="quarto-meta-markdown" class="hidden">
-<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-metatitle">HW3 – Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-twittercardtitle">HW3 – Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-ogcardtitle">HW3 – Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-metasitename">Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-twittercarddesc"></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-ogcardddesc"></span></p>
-</div>
+    // Function to handle form submission
+    document.getElementById('comment-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        var name = document.getElementById('name').value;
+        var commentText = document.getElementById('comment').value;
+
+        // Display the new comment
+        var commentHTML = `
+            <div class="comment">
+                <p><strong>${name}</strong> says:</p>
+                <p>${commentText}</p>
+            </div>
+        `;
+        document.getElementById('comments-section').innerHTML += commentHTML;
+        document.getElementById('name').value = ''; // Clear the name input
+        document.getElementById('comment').value = ''; // Clear the textarea
+    });
+</script>
+
+
 </section>
 
 </main> <!-- /main -->
-<script id = "quarto-html-after-body" type="application/javascript">
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -720,7 +732,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-</section></main></div> <!-- /content -->
+</div> <!-- /content -->
 
 
 
