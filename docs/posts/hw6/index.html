@@ -213,7 +213,7 @@ H_A : mu&lt;16</p>
 <ul>
 <li>검정통계량 계산하시오.</li>
 </ul>
-<div id="ad6092f8" class="cell" data-execution_count="1">
+<div id="8e2e4ed7" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -232,7 +232,7 @@ H_A : mu&lt;16</p>
 <ul>
 <li>p‑value을 구하세요.</li>
 </ul>
-<div id="dffae0e9" class="cell" data-execution_count="2">
+<div id="6aa3bd69" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> t</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>p_val <span class="op">=</span>t.cdf(<span class="op">-</span><span class="fl">1.85</span>, df<span class="op">=</span>n<span class="op">-</span><span class="dv">1</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'p_val = '</span>,p_val) <span class="co"># 유의수준 0.01보다 큼</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -243,7 +243,7 @@ H_A : mu&lt;16</p>
 <ul>
 <li>현대자동차의 신형 모델의 평균 복합 에너지 소비효율에 대하여 95% 신뢰구간을 구해보세요.</li>
 </ul>
-<div id="9fe51d11" class="cell" data-execution_count="3">
+<div id="c89a82de" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>z_0025 <span class="op">=</span> t.ppf(<span class="fl">0.975</span>, df<span class="op">=</span>n<span class="op">-</span><span class="dv">1</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>l_ci <span class="op">=</span> x_bar <span class="op">-</span> z_0025 <span class="op">*</span> s<span class="op">/</span>np.sqrt(n)</span>
@@ -253,37 +253,36 @@ H_A : mu&lt;16</p>
 <pre><code>l_ci =  14.988864240339733</code></pre>
 </div>
 </div>
-<div id="7a372dce" class="cell" data-execution_count="4">
+<div id="97fb8f7a" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'r_ci = '</span>,r_ci)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>r_ci =  16.074602426326933</code></pre>
 </div>
 </div>
-<div id="disqus_thread">
+<form id="comment-form">
+<label for="comment">Leave a Comment:</label><br>
+<textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+<br> <input type="submit" value="Submit">
+</form>
+<div id="comments-section">
 
 </div>
 <script>
-var disqus_config = function () {
-    this.page.url = window.location.href;  // 현재 페이지 URL
-    this.page.identifier = window.location.pathname; // 페이지 고유 식별자
-};
-
-(function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://sanghoohoo.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>
-Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-</noscript>
-
-
+document.getElementById(‘comment-form’).addEventListener(‘submit’, function(e) { e.preventDefault(); var comment = document.getElementById(‘comment’).value; // 댓글을 서버에 저장하는 코드 추가 document.getElementById(‘comments-section’).innerHTML += ’
+<p>
+’ + comment + ’
+</p>
+<p>‘; document.getElementById(’comment’).value = ’’; // 폼 초기화 });</p>
+<div id="quarto-navigation-envelope" class="hidden">
+<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar-title">Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar-title">Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:Home">Home</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:/index.html">/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:About">About</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:/about.html">/about.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:LS bigdata">LS bigdata</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:/lsbigdata_blog.html">/lsbigdata_blog.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:KNU">KNU</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:/KNU_blog.html">/KNU_blog.html</span></p>
+</div>
+<div id="quarto-meta-markdown" class="hidden">
+<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-metatitle">HW6 – Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-twittercardtitle">HW6 – Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-ogcardtitle">HW6 – Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-metasitename">Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-twittercarddesc"></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-ogcardddesc"></span></p>
+</div>
 </section>
 
 </main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+<script id = "quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -703,7 +702,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-</div> <!-- /content -->
+</section></main></div> <!-- /content -->
 
 
 

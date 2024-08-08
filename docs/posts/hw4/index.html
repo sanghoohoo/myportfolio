@@ -203,7 +203,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>n-1로 나눈 것을 s_2, n으로 나눈 것을 k_2로 정의하고, s_2의 분포와 k_2의 분포를 그려주세요! (10000개 사용)</li>
 </ul>
-<div id="df0db8e8" class="cell" data-execution_count="1">
+<div id="01c381fe" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> uniform</span>
@@ -225,7 +225,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>&lt;Figure size 672x480 with 0 Axes&gt;</code></pre>
 </div>
 </div>
-<div id="3f533ec6" class="cell" data-execution_count="2">
+<div id="4fa55894" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>k_2<span class="op">=</span>(((x <span class="op">-</span> <span class="dv">5</span>)<span class="op">**</span><span class="dv">2</span>) <span class="op">/</span> <span class="dv">20</span>).<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>sns.histplot(k_2)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
@@ -244,7 +244,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ul>
 <li>각 분포 그래프에 모분산의 위치에 녹색 막대를 그려주세요.</li>
 </ul>
-<div id="5ff482d5" class="cell" data-execution_count="3">
+<div id="221d19ad" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>var_x<span class="op">=</span>np.var(x)</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>sns.histplot(s_2)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>plt.axvline(x<span class="op">=</span>var_x, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
@@ -261,7 +261,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <pre><code>&lt;Figure size 672x480 with 0 Axes&gt;</code></pre>
 </div>
 </div>
-<div id="1b28565a" class="cell" data-execution_count="4">
+<div id="499df112" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>sns.histplot(k_2)</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>plt.axvline(x<span class="op">=</span>var_x, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
@@ -283,31 +283,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>n-1로 나눈 결과 분포의 평균이 모분산에 더 근접함</p>
 </blockquote>
-<div id="disqus_thread">
+<form id="comment-form">
+<label for="comment">Leave a Comment:</label><br>
+<textarea id="comment" name="comment" rows="4" cols="50"></textarea>
+<br> <input type="submit" value="Submit">
+</form>
+<div id="comments-section">
 
 </div>
 <script>
-var disqus_config = function () {
-    this.page.url = window.location.href;  // 현재 페이지 URL
-    this.page.identifier = window.location.pathname; // 페이지 고유 식별자
-};
-
-(function() { // DON'T EDIT BELOW THIS LINE
-    var d = document, s = d.createElement('script');
-    s.src = 'https://sanghoohoo.disqus.com/embed.js';
-    s.setAttribute('data-timestamp', +new Date());
-    (d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>
-Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-</noscript>
-
-
+document.getElementById(‘comment-form’).addEventListener(‘submit’, function(e) { e.preventDefault(); var comment = document.getElementById(‘comment’).value; // 댓글을 서버에 저장하는 코드 추가 document.getElementById(‘comments-section’).innerHTML += ’
+<p>
+’ + comment + ’
+</p>
+<p>‘; document.getElementById(’comment’).value = ’’; // 폼 초기화 });</p>
+<div id="quarto-navigation-envelope" class="hidden">
+<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-sidebar-title">Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar-title">Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:Home">Home</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:/index.html">/index.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:About">About</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:/about.html">/about.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:LS bigdata">LS bigdata</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:/lsbigdata_blog.html">/lsbigdata_blog.html</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:KNU">KNU</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-int-navbar:/KNU_blog.html">/KNU_blog.html</span></p>
+</div>
+<div id="quarto-meta-markdown" class="hidden">
+<p><span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-metatitle">HW4 – Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-twittercardtitle">HW4 – Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-ogcardtitle">HW4 – Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-metasitename">Sanghoo Ahn</span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-twittercarddesc"></span> <span class="hidden quarto-markdown-envelope-contents" data-render-id="quarto-ogcardddesc"></span></p>
+</div>
 </section>
 
 </main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+<script id = "quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -727,7 +726,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-</div> <!-- /content -->
+</section></main></div> <!-- /content -->
 
 
 
