@@ -76,37 +76,18 @@ plt.show()
 ```
 
   
-  <form id="comment-form">
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name" required><br><br>
-    
-    <label for="comment">Leave a Comment:</label><br>
-    <textarea id="comment" name="comment" rows="4" cols="50" required></textarea><br><br>
-    
-    <input type="submit" value="Submit">
-</form>
-
-<div id="comments-section">
-
-</div>
-
+<div id="disqus_thread"></div>
 <script>
-    // Function to handle form submission
-    document.getElementById('comment-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        var name = document.getElementById('name').value;
-        var commentText = document.getElementById('comment').value;
+var disqus_config = function () {
+    this.page.url = window.location.href;  // 현재 페이지 URL
+    this.page.identifier = window.location.pathname; // 페이지 고유 식별자
+};
 
-        // Display the new comment
-        var commentHTML = `
-            <div class="comment">
-                <p><strong>${name}</strong> says:</p>
-                <p>${commentText}</p>
-            </div>
-        `;
-        document.getElementById('comments-section').innerHTML += commentHTML;
-        document.getElementById('name').value = ''; // Clear the name input
-        document.getElementById('comment').value = ''; // Clear the textarea
-    });
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://sanghoohoo.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
 </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
