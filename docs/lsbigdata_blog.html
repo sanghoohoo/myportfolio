@@ -78,9 +78,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-date','listing-title','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -128,7 +128,6 @@ window.Quarto = {
 };
 </script>
 
-<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -172,14 +171,14 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
     <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(10)</span></div><div class="category" data-category="Homework">Homework <span class="quarto-category-count">(7)</span></div><div class="category" data-category="bigdata">bigdata <span class="quarto-category-count">(1)</span></div><div class="category" data-category="project">project <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -188,7 +187,7 @@ window.Quarto = {
 
 
 
-<div class="quarto-title-meta">
+<div class="quarto-title-meta column-page-left">
 
     
   
@@ -204,329 +203,194 @@ window.Quarto = {
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1723077535060" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
-<div class="thumbnail">
-<p><a href="./posts/index.html" class="no-external"></a></p><a href="./posts/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/index.html" class="no-external"></a></p>
+<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title" data-direction="asc">
+          Title
+        </option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
 </div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/index.html" class="no-external">Recent posts</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/index.html" class="no-external"></a>
+<div class="list grid quarto-listing-cols-3">
+<div class="g-col-1" data-index="0" data-listing-file-modified-sort="1723077535060" data-listing-reading-time-sort="1" data-listing-word-count-sort="2">
+<a href="./posts/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\fire_project\fire_presentation_files\figure-html\cell-13-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+Recent posts
+</h5>
 </div>
-<div class="listing-description">
-<a href="./posts/index.html" class="no-external">
-
+</div>
 </a>
 </div>
-</div>
-<div class="metadata">
-<p><a href="./posts/index.html" class="no-external"></a></p><a href="./posts/index.html" class="no-external">
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="bigdata" data-listing-date-sort="1722783600000" data-listing-file-modified-sort="1722861588375" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="176">
-<div class="thumbnail">
-<p><a href="./posts/hw6/index.html" class="no-external"></a></p><a href="./posts/hw6/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/hw6/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hw6/index.html" class="no-external">HW6</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hw6/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('bigdata'); return false;">
-bigdata
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/hw6/index.html" class="no-external"><strong>슬통 자동차는 매해 출시되는 신형 자동차의 에너지 소비효율 등급을 1등급으로 유지하고 있다. 22년 개발된 신형 모델이 한국 자동차 평가원에서 설정한 에너지 소비 효율등급 1등급을 받을 수 있을지 검정하려한다. 평가원에 따르면 1등급의 기준은 평균 복합 에너지 소비효율이 16.0 이상인 경우 부여한다고 한다.</strong><br>
-<strong>…</strong><br><strong></strong><br><strong></strong></a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/hw6/index.html" class="no-external">
+<div class="g-col-1" data-index="1" data-categories="bigdata" data-listing-date-sort="1722783600000" data-listing-file-modified-sort="1722861588375" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="176">
+<a href="./posts/hw6/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+HW6
+</h5>
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Aug 5, 2024
 </div>
-<div class="listing-author">
-Sanghoo Ahn
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="project" data-listing-date-sort="1721746800000" data-listing-file-modified-sort="1722862602640" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1163">
-<div class="thumbnail">
-<p><a href="./posts/fire_project/fire_presentation.html" class="no-external"></a></p><a href="./posts/fire_project/fire_presentation.html" class="no-external">
-<p class="card-img-top"><img src="posts\fire_project\fire_presentation_files\figure-html\cell-13-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/fire_project/fire_presentation.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/fire_project/fire_presentation.html" class="no-external">계절별 화재발생 빈도 및 요인 분석</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/fire_project/fire_presentation.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('project'); return false;">
-project
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/fire_project/fire_presentation.html" class="no-external"><br></a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/fire_project/fire_presentation.html" class="no-external">
+<div class="g-col-1" data-index="2" data-categories="project" data-listing-date-sort="1721746800000" data-listing-file-modified-sort="1722862602640" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-word-count-sort="1163">
+<a href="./posts/fire_project/fire_presentation.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\fire_project\fire_presentation_files\figure-html\cell-13-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+계절별 화재발생 빈도 및 요인 분석
+</h5>
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jul 24, 2024
 </div>
-<div class="listing-author">
-명예소방관 시켜조🚒 : 안상후, 오서연, 김주영, 김재희
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Homework" data-listing-date-sort="1721746800000" data-listing-file-modified-sort="1722862463576" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="419">
-<div class="thumbnail">
-<p><a href="./posts/hw5/index.html" class="no-external"></a></p><a href="./posts/hw5/index.html" class="no-external">
-<p class="card-img-top"><img src="posts\hw5\index_files\figure-html\cell-2-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/hw5/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hw5/index.html" class="no-external">HW5</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hw5/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Homework'); return false;">
-Homework
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/hw5/index.html" class="no-external"><strong>성별에 따른 월급 설문조사 그래프에서 각 성별 95% 신뢰구간 계산 후 그리기 norm.ppf() 사용해서 그릴 것. 모분산은 표본분산을 사용해서 규정.</strong></a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/hw5/index.html" class="no-external">
+<div class="g-col-1" data-index="3" data-categories="Homework" data-listing-date-sort="1721746800000" data-listing-file-modified-sort="1722862463576" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="419">
+<a href="./posts/hw5/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\hw5\index_files\figure-html\cell-2-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+HW5
+</h5>
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jul 24, 2024
 </div>
-<div class="listing-author">
-Sanghoo Ahn
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="Homework" data-listing-date-sort="1721660400000" data-listing-file-modified-sort="1722862458996" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="92">
-<div class="thumbnail">
-<p><a href="./posts/hw4/index.html" class="no-external"></a></p><a href="./posts/hw4/index.html" class="no-external">
-<p class="card-img-top"><img src="posts\hw4\index_files\figure-html\cell-2-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/hw4/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hw4/index.html" class="no-external">HW4</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hw4/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Homework'); return false;">
-Homework
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/hw4/index.html" class="no-external"><strong>표본 분산 계산 시 왜 n-1로 나누는지 알아보도록 하겠습니다. 균일분포 (3, 7)에서 20개의 표본을 뽑아서 분산을 2가지 방법으로 추정해보세요.</strong></a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/hw4/index.html" class="no-external">
+<div class="g-col-1" data-index="4" data-categories="Homework" data-listing-date-sort="1721660400000" data-listing-file-modified-sort="1722862458996" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="92">
+<a href="./posts/hw4/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\hw4\index_files\figure-html\cell-2-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+HW4
+</h5>
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jul 23, 2024
 </div>
-<div class="listing-author">
-Sanghoo Ahn
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="Homework" data-listing-date-sort="1721314800000" data-listing-file-modified-sort="1722862418176" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="110">
-<div class="thumbnail">
-<p><a href="./posts/hw3/index.html" class="no-external"></a></p><a href="./posts/hw3/index.html" class="no-external">
-<p class="card-img-top"><img src="posts\hw3\index_files\figure-html\cell-2-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/hw3/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hw3/index.html" class="no-external">HW3</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hw3/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Homework'); return false;">
-Homework
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/hw3/index.html" class="no-external"><strong>정규분포 pdf 값을 계산하는 자신만의 파이썬 함수를 정의하고, 정규분포 mu = 3, sigma = 2 의 pdf를 그릴 것.</strong></a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/hw3/index.html" class="no-external">
+<div class="g-col-1" data-index="5" data-categories="Homework" data-listing-date-sort="1721314800000" data-listing-file-modified-sort="1722862418176" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="110">
+<a href="./posts/hw3/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\hw3\index_files\figure-html\cell-2-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+HW3
+</h5>
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jul 19, 2024
 </div>
-<div class="listing-author">
-Sanghoo Ahn
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="Homework" data-listing-date-sort="1721228400000" data-listing-file-modified-sort="1722862411119" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="182">
-<div class="thumbnail">
-<p><a href="./posts/hw2.2/index.html" class="no-external"></a></p><a href="./posts/hw2.2/index.html" class="no-external">
-<p class="card-img-top"><img src="posts\hw2.2\index_files\figure-html\cell-2-output-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/hw2.2/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hw2.2/index.html" class="no-external">HW2.2</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hw2.2/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Homework'); return false;">
-Homework
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/hw2.2/index.html" class="no-external"><strong>mpg데이터의 cty(도시 연비)와 hwy(고속도로 연비) 간에 어떤 관계가 있는지 알아보려고 합니다. x축은 cty, y축은 hwy로 된 산점도를 만들어 보세요.</strong></a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/hw2.2/index.html" class="no-external">
+<div class="g-col-1" data-index="6" data-categories="Homework" data-listing-date-sort="1721228400000" data-listing-file-modified-sort="1722862411119" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="182">
+<a href="./posts/hw2.2/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\hw2.2\index_files\figure-html\cell-2-output-1.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+HW2.2
+</h5>
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jul 18, 2024
 </div>
-<div class="listing-author">
-Sanghoo Ahn
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="Homework" data-listing-date-sort="1721142000000" data-listing-file-modified-sort="1722862399175" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="34">
-<div class="thumbnail">
-<p><a href="./posts/hw2.1/index.html" class="no-external"></a></p><a href="./posts/hw2.1/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/hw2.1/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hw2.1/index.html" class="no-external">HW2.1</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hw2.1/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Homework'); return false;">
-Homework
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/hw2.1/index.html" class="no-external"><strong>exam데이터 불러오기</strong></a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/hw2.1/index.html" class="no-external">
+<div class="g-col-1" data-index="7" data-categories="Homework" data-listing-date-sort="1721142000000" data-listing-file-modified-sort="1722862399175" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="34">
+<a href="./posts/hw2.1/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+HW2.1
+</h5>
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jul 17, 2024
 </div>
-<div class="listing-author">
-Sanghoo Ahn
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="Homework" data-listing-date-sort="1721055600000" data-listing-file-modified-sort="1722862023591" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="160">
-<div class="thumbnail">
-<p><a href="./posts/hw2/index.html" class="no-external"></a></p><a href="./posts/hw2/index.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./posts/hw2/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hw2/index.html" class="no-external">HW2</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hw2/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Homework'); return false;">
-Homework
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/hw2/index.html" class="no-external"><strong>자동차 배기량에 따라 고속도로 연비가 다른지 알아보려고 합니다. displ(배기량)이 4이하인 자동차와 5이상인 자동차 중 어떤 자동차의 hwy(고속도로 연비) 평균이 더 높은지 알아보세요.</strong></a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/hw2/index.html" class="no-external">
+<div class="g-col-1" data-index="8" data-categories="Homework" data-listing-date-sort="1721055600000" data-listing-file-modified-sort="1722862023591" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="160">
+<a href="./posts/hw2/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<div class="listing-item-img-placeholder card-img-top" style="height: 150px;">&nbsp;</div>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+HW2
+</h5>
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jul 16, 2024
 </div>
-<div class="listing-author">
-Sanghoo Ahn
+</div>
+</div>
 </div>
 </a>
 </div>
-</div>
-<div class="quarto-post image-right" data-index="9" data-categories="Homework" data-listing-date-sort="1720710000000" data-listing-file-modified-sort="1722862023589" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="87">
-<div class="thumbnail">
-<p><a href="./posts/hw1/index.html" class="no-external"></a></p><a href="./posts/hw1/index.html" class="no-external">
-<p class="card-img-top"><img src="posts\hw1\index_files\figure-html\cell-6-output-2.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/hw1/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/hw1/index.html" class="no-external">HW1</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/hw1/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Homework'); return false;">
-Homework
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/hw1/index.html" class="no-external"><strong>다음 표의 내용을 데이터 프레임으로 만들어 출력해 보세요. (p.85)</strong></a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/hw1/index.html" class="no-external">
+<div class="g-col-1" data-index="9" data-categories="Homework" data-listing-date-sort="1720710000000" data-listing-file-modified-sort="1722862023589" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="87">
+<a href="./posts/hw1/index.html" class="quarto-grid-link">
+<div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top"><img src="posts\hw1\index_files\figure-html\cell-6-output-2.png" style="height: 150px;"  class="thumbnail-image card-img"/></p>
+<div class="card-body post-contents">
+<h5 class="no-anchor card-title listing-title">
+HW1
+</h5>
+<div class="card-attribution card-text-small end">
 <div class="listing-date">
 Jul 12, 2024
 </div>
-<div class="listing-author">
-Sanghoo Ahn
+</div>
+</div>
 </div>
 </a>
-</div>
 </div>
 </div>
 <div class="listing-no-matching d-none">

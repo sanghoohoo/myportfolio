@@ -1,8 +1,18 @@
 ---
 title: "LS bigdata"
 listing:
-  contents: posts
+  contents: 
+    - "posts/**/*.qmd"
+    - "posts/**/*.ipynb"
+  type: grid
+  fields: [image, date, title, subtitle]
   sort: "date desc"
-  type: default
   categories: true
+  sort-ui: true
+  filter-ui: true
+  page-size: 36     
+page-layout: full
+title-block-banner: false
+comments: false
+toc: true
 ---
