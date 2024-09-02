@@ -157,7 +157,7 @@ for i in range(500):
 ```{python}
 # 발생한 500개의 s^2 들 각각에 4.75를 곱하고, 그것들의 히스토그램을 그려보세요. (히스토그램을 그릴 때 probability = TRUE 옵션을 사용해서 그릴 것)
 a=np.array(var)*4.75
-sns.histplot(a, stat="probability")
+sns.histplot(a, stat='density')
 # 위에서 그린 히스토그램에 자유도가 19인 카이제곱분포 확률밀도함수를 겹쳐그려보세요.
 k = np.linspace(a.min(), a.max(), 100)
 y = chi2.pdf(k, df=19)
