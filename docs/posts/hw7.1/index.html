@@ -104,7 +104,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
+
+
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
 
 
 </head>
@@ -212,14 +215,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="문제-1." class="level2">
 <h2 class="anchored" data-anchor-id="문제-1.">문제 1.</h2>
 <p><strong>데이터를 로드하고, 로지스틱 회귀모델을 적합하고, 회귀 표를 작성하세요.</strong></p>
-<div id="37bc7853" class="cell" data-execution_count="1">
+<div id="17bddc5c" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statsmodels.api <span class="im">as</span> sm</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'../../data/leukemia_remission.txt'</span>, sep<span class="op">=</span><span class="st">'</span><span class="ch">\t</span><span class="st">'</span>)</span>
 <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="12">
+<div class="cell-output cell-output-display" data-execution_count="1">
 <div>
 
 
@@ -513,7 +516,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="faea4739" class="cell" data-execution_count="2">
+<div id="e4898481" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> sm.formula.logit(<span class="st">"REMISS ~ CELL + SMEAR + INFIL + LI + BLAST + TEMP"</span>, data<span class="op">=</span>df).fit()</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(model.summary())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -526,8 +529,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 Dep. Variable:                 REMISS   No. Observations:                   27
 Model:                          Logit   Df Residuals:                       20
 Method:                           MLE   Df Model:                            6
-Date:                Mon, 09 Sep 2024   Pseudo R-squ.:                  0.3718
-Time:                        21:13:33   Log-Likelihood:                -10.797
+Date:                Tue, 10 Sep 2024   Pseudo R-squ.:                  0.3718
+Time:                        09:47:01   Log-Likelihood:                -10.797
 converged:                       True   LL-Null:                       -17.186
 Covariance Type:            nonrobust   LLR p-value:                   0.04670
 ==============================================================================
@@ -551,11 +554,11 @@ quasi-separation. In this case some parameters will not be identified.</code></p
 <section id="문제-2." class="level2">
 <h2 class="anchored" data-anchor-id="문제-2.">문제 2.</h2>
 <p><strong>해당 모델은 통계적으로 유의한가요? 그 이유를 검정통계량를 사용해서 설명하시오.</strong></p>
-<div id="2ce40d93" class="cell" data-execution_count="3">
+<div id="34d28e5e" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> chi2</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>p_val<span class="op">=</span><span class="dv">1</span><span class="op">-</span>chi2.cdf(<span class="op">-</span><span class="dv">2</span><span class="op">*</span>(<span class="op">-</span><span class="fl">17.186</span> <span class="op">+</span> <span class="fl">10.797</span>), df<span class="op">=</span><span class="dv">6</span>)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>p_val</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="14">
+<div class="cell-output cell-output-display" data-execution_count="3">
 <pre><code>np.float64(0.04669995098322843)</code></pre>
 </div>
 </div>
@@ -566,7 +569,7 @@ quasi-separation. In this case some parameters will not be identified.</code></p
 <section id="문제-3." class="level2">
 <h2 class="anchored" data-anchor-id="문제-3.">문제 3.</h2>
 <p><strong>유의수준이 0.2를 기준으로 통계적으로 유의한 변수는 몇개이며, 어느 변수 인가요?</strong></p>
-<div id="274a602b" class="cell" data-execution_count="4">
+<div id="c24a66a6" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1</span><span class="op">-</span>norm.cdf(<span class="fl">30.8301</span><span class="op">/</span><span class="fl">52.135</span>))<span class="op">*</span><span class="dv">2</span> <span class="co"># cell 0.5542850639621408</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1</span><span class="op">-</span>norm.cdf(<span class="fl">24.6863</span><span class="op">/</span><span class="fl">61.526</span>))<span class="op">*</span><span class="dv">2</span> <span class="co"># smear 0.6882481267876992</span></span>
@@ -574,7 +577,7 @@ quasi-separation. In this case some parameters will not be identified.</code></p
 <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1</span><span class="op">-</span>norm.cdf(<span class="fl">4.3605</span><span class="op">/</span><span class="fl">2.658</span>))<span class="op">*</span><span class="dv">2</span> <span class="co"># li 0.10089726232517515 &lt; 0.2</span></span>
 <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>(norm.cdf(<span class="op">-</span><span class="fl">0.0115</span><span class="op">/</span><span class="fl">2.266</span>))<span class="op">*</span><span class="dv">2</span> <span class="co"># blast 0.9959507356304004 </span></span>
 <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>(norm.cdf(<span class="op">-</span><span class="fl">100.1734</span><span class="op">/</span><span class="fl">77.753</span>))<span class="op">*</span><span class="dv">2</span> <span class="co"># temp 0.19762271242612317 &lt; 0.2</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="15">
+<div class="cell-output cell-output-display" data-execution_count="4">
 <pre><code>np.float64(0.19762271242612317)</code></pre>
 </div>
 </div>
@@ -585,17 +588,17 @@ quasi-separation. In this case some parameters will not be identified.</code></p
 <section id="문제-4." class="level2">
 <h2 class="anchored" data-anchor-id="문제-4.">문제 4.</h2>
 <p><strong>다음 환자에 대한 오즈는 얼마인가요?</strong></p>
-<div id="ab5f1636" class="cell" data-execution_count="5">
+<div id="a7d0c4b0" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># CELL : 65%</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># SMEAR : 45%</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># INFIL : 55%</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="co"># LI : 1.2</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># BLAST : 20000 세포/μL</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co"># TEMP : 38.5°C</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co"># BLAST : 1.1세포/μL</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co"># TEMP : 0.9</span></span>
 <span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>log_odds <span class="op">=</span> <span class="fl">64.2581</span> <span class="op">+</span> <span class="fl">30.8301</span> <span class="op">*</span> <span class="fl">0.65</span> <span class="op">+</span> <span class="fl">24.6863</span> <span class="op">*</span> <span class="fl">0.45</span> <span class="op">-</span> <span class="fl">24.9745</span> <span class="op">*</span> <span class="fl">0.55</span> <span class="op">+</span> <span class="fl">4.3605</span> <span class="op">*</span> <span class="fl">1.2</span> <span class="op">-</span> <span class="fl">0.0115</span> <span class="op">*</span> <span class="fl">1.1</span> <span class="op">-</span> <span class="fl">100.1734</span> <span class="op">*</span> <span class="fl">0.9</span></span>
 <span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>odds <span class="op">=</span> np.exp(log_odds)</span>
 <span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>odds <span class="co"># 0.03817459641135519</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="16">
+<div class="cell-output cell-output-display" data-execution_count="5">
 <pre><code>np.float64(0.03817459641135519)</code></pre>
 </div>
 </div>
@@ -603,10 +606,10 @@ quasi-separation. In this case some parameters will not be identified.</code></p
 <section id="문제-5." class="level2">
 <h2 class="anchored" data-anchor-id="문제-5.">문제 5.</h2>
 <p><strong>위 환자의 혈액에서 백혈병 세포가 관측되지 않은 확률은 얼마인가요?</strong></p>
-<div id="909d5572" class="cell" data-execution_count="6">
+<div id="cedfa45d" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>p_hat <span class="op">=</span> odds <span class="op">/</span> (odds <span class="op">+</span> <span class="dv">1</span>)</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>p_hat <span class="co"># 0.03677088280074742)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="17">
+<div class="cell-output cell-output-display" data-execution_count="6">
 <pre><code>np.float64(0.03677088280074742)</code></pre>
 </div>
 </div>
@@ -614,33 +617,33 @@ quasi-separation. In this case some parameters will not be identified.</code></p
 <section id="문제-6." class="level2">
 <h2 class="anchored" data-anchor-id="문제-6.">문제 6.</h2>
 <p><strong>TEMP 변수의 계수는 얼마이며, 해당 계수를 사용해서 TEMP 변수가 백혈병 치료에 대한 영향을 설명하시오.</strong></p>
-<div id="cb3c0bce" class="cell" data-execution_count="7">
+<div id="924e6f0e" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>np.exp(<span class="op">-</span><span class="fl">100.1734</span>)<span class="op">*</span><span class="dv">100</span> </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="18">
+<div class="cell-output cell-output-display" data-execution_count="7">
 <pre><code>np.float64(3.1278444454718354e-42)</code></pre>
 </div>
 </div>
 <blockquote class="blockquote">
-<p>계수: -100.1734 temp가 1 증가할때 오즈가 3.1278444454718354e-42[%] 로 감소한다.</p>
+<p>계수: -100.1734 temp가 1 증가할때 REMISS에 대한 오즈가 3.1278444454718354e-42[%] 로 감소한다. 즉 백혈병 세포가 관측될 확률이 증가한다.</p>
 </blockquote>
 </section>
 <section id="문제-7." class="level2">
 <h2 class="anchored" data-anchor-id="문제-7.">문제 7.</h2>
 <p><strong>CELL 변수의 99% 오즈비에 대한 신뢰구간을 구하시오.</strong></p>
-<div id="5510130d" class="cell" data-execution_count="8">
+<div id="3af96dce" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> norm.ppf(<span class="fl">0.995</span>,<span class="dv">0</span>,<span class="dv">1</span>)</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>r_ci <span class="op">=</span> <span class="fl">30.8301</span> <span class="op">+</span> z <span class="op">*</span> <span class="fl">52.135</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>l_ci <span class="op">=</span> <span class="fl">30.8301</span> <span class="op">-</span> z <span class="op">*</span> <span class="fl">52.135</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>r_ci <span class="op">=</span> np.exp(<span class="fl">30.8301</span> <span class="op">+</span> z <span class="op">*</span> <span class="fl">52.135</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>l_ci <span class="op">=</span> np.exp(<span class="fl">30.8301</span> <span class="op">-</span> z <span class="op">*</span> <span class="fl">52.135</span>)</span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>l_ci, r_ci</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="19">
-<pre><code>(np.float64(-103.4607607405219), np.float64(165.12096074052192))</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<pre><code>(np.float64(1.1683218982002717e-45), np.float64(5.141881884993857e+71))</code></pre>
 </div>
 </div>
 </section>
 <section id="문제-8." class="level2">
 <h2 class="anchored" data-anchor-id="문제-8.">문제 8.</h2>
 <p><strong>주어진 데이터에 대하여 로지스틱 회귀 모델의 예측 확률을 구한 후, 50% 이상인 경우 1로 처리하여, 혼동 행렬를 구하시오.</strong></p>
-<div id="279da801" class="cell" data-execution_count="9">
+<div id="c6f09b11" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>df_x<span class="op">=</span>df.drop([<span class="st">"REMISS"</span>], axis<span class="op">=</span><span class="dv">1</span>)</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>df_y<span class="op">=</span>df[<span class="st">"REMISS"</span>]</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -651,7 +654,7 @@ quasi-separation. In this case some parameters will not be identified.</code></p
 <span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>                          y_pred<span class="op">=</span>np.array(y_pred),</span>
 <span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>                          labels<span class="op">=</span>[<span class="dv">1</span>, <span class="dv">0</span>])</span>
 <span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>conf_mat</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="20">
+<div class="cell-output cell-output-display" data-execution_count="9">
 <pre><code>array([[ 5,  4],
        [ 3, 15]])</code></pre>
 </div>
@@ -660,9 +663,9 @@ quasi-separation. In this case some parameters will not be identified.</code></p
 <section id="문제-9." class="level2">
 <h2 class="anchored" data-anchor-id="문제-9.">문제 9.</h2>
 <p><strong>해당 모델의 Accuracy는 얼마인가요?</strong></p>
-<div id="d4a36320" class="cell" data-execution_count="10">
+<div id="88cffbd7" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>(conf_mat[<span class="dv">0</span>][<span class="dv">0</span>]<span class="op">+</span>conf_mat[<span class="dv">1</span>][<span class="dv">1</span>])<span class="op">/</span>conf_mat.<span class="bu">sum</span>() <span class="co"># 0.7407407407407407</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="21">
+<div class="cell-output cell-output-display" data-execution_count="10">
 <pre><code>np.float64(0.7407407407407407)</code></pre>
 </div>
 </div>
@@ -670,13 +673,13 @@ quasi-separation. In this case some parameters will not be identified.</code></p
 <section id="문제-10." class="level2">
 <h2 class="anchored" data-anchor-id="문제-10.">문제 10.</h2>
 <p><strong>해당 모델의 F1 Score를 구하세요.</strong></p>
-<div id="055f5e57" class="cell" data-execution_count="11">
+<div id="f6755e21" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>precision<span class="op">=</span>conf_mat[<span class="dv">0</span>][<span class="dv">0</span>]<span class="op">/</span>(conf_mat[<span class="dv">0</span>][<span class="dv">0</span>]<span class="op">+</span>conf_mat[<span class="dv">1</span>][<span class="dv">0</span>])</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>recall<span class="op">=</span>conf_mat[<span class="dv">0</span>][<span class="dv">0</span>]<span class="op">/</span>(conf_mat[<span class="dv">0</span>][<span class="dv">0</span>]<span class="op">+</span>conf_mat[<span class="dv">0</span>][<span class="dv">1</span>])</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>f1<span class="op">=</span><span class="dv">2</span><span class="op">/</span>((<span class="dv">1</span><span class="op">/</span>precision)<span class="op">+</span>(<span class="dv">1</span><span class="op">/</span>recall))</span>
 <span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>f1 <span class="co"># 0.5882352941176471</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="22">
+<div class="cell-output cell-output-display" data-execution_count="11">
 <pre><code>np.float64(0.5882352941176471)</code></pre>
 </div>
 </div>
