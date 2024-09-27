@@ -2,7 +2,7 @@
 title: "YOLO8"
 author: 'Sanghoo Ahn'
 date: '2024-09-27'
-categories: [Deeplearning]
+categories: [Machine Learning]
 jupyter: python3
 ---
 
