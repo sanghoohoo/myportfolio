@@ -202,11 +202,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="kaggle-링크" class="level2">
 <h2 class="anchored" data-anchor-id="kaggle-링크">Kaggle 링크</h2>
-<p>https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques</p>
+<p><a href="https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques">House Prices - Advanced Regression Techniques</a></p>
 </section>
 <section id="전처리" class="level2">
 <h2 class="anchored" data-anchor-id="전처리">전처리</h2>
-<div id="a25b38b3" class="cell" data-execution_count="1">
+<div id="e5d3c68b" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 필요한 패키지 불러오기</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -305,7 +305,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="모델-생성-및-예측" class="level2">
 <h2 class="anchored" data-anchor-id="모델-생성-및-예측">모델 생성 및 예측</h2>
-<div id="0e991627" class="cell" data-execution_count="2">
+<div id="89f24a28" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 부스트 모델 생성</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> xgboost <span class="im">as</span> xgb</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> GridSearchCV</span>
@@ -384,7 +384,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="모델-성능" class="level2">
 <h2 class="anchored" data-anchor-id="모델-성능">모델 성능</h2>
-<div id="671dd48a" class="cell" data-execution_count="3">
+<div id="1b389f71" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 모델 성능 평가</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_squared_error</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>train_y_pred <span class="op">=</span> blender_model.predict(train_x_stack)</span>

@@ -6,7 +6,7 @@ categories: [Machine Learning]
 jupyter: python3
 ---
 ## Kaggle 링크
-https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques  
+[House Prices - Advanced Regression Techniques](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques)
 
 ## 전처리
 
