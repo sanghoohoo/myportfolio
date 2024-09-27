@@ -104,10 +104,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
 
-
-
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
-
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -240,7 +237,7 @@ window.Quarto = {
 <ul>
 <li>ADP 실기 시험의 통계파트 표준점수의 밀도함수를 그려보세요</li>
 </ul>
-<div id="4f5f7009" class="cell" data-execution_count="1">
+<div id="178e0aeb" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> norm</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -258,7 +255,7 @@ window.Quarto = {
 <ul>
 <li>ADP 수험생을 임의로 1명을 선택하여 통계 점수를 조회했을때 45점 보다 높은 점수를 받았을 확률을 구하세요.</li>
 </ul>
-<div id="062f84e3" class="cell" data-execution_count="2">
+<div id="123e48b0" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="dv">1</span><span class="op">-</span>norm.cdf(<span class="dv">45</span>, loc<span class="op">=</span><span class="dv">30</span>, scale<span class="op">=</span><span class="dv">5</span>)</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(p, <span class="dv">6</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -268,7 +265,7 @@ window.Quarto = {
 <ul>
 <li>슬통이는 상위 10%에 해당하는 점수를 얻었다고 한다면, 슬통이의 점수는 얼마인지 계산해보세요.</li>
 </ul>
-<div id="64677c77" class="cell" data-execution_count="3">
+<div id="1d976162" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>score <span class="op">=</span> norm.ppf(<span class="fl">0.9</span>, loc<span class="op">=</span><span class="dv">30</span>, scale<span class="op">=</span><span class="dv">5</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(score, <span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -278,7 +275,7 @@ window.Quarto = {
 <ul>
 <li>슬기로운 통계생활의 해당 회차 수강생은 16명이었다고 한다. 16명의 통계 파트 점수를 평균내었을 때, 이 평균값이 따르는 분포의 확률밀도 함수를 1번의 그래프와 겹쳐 그려보세요.</li>
 </ul>
-<div id="54d6d459" class="cell" data-execution_count="4">
+<div id="5752fec3" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> np.linspace(<span class="dv">10</span>, <span class="dv">50</span>, <span class="dv">100</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> norm.pdf(k, loc<span class="op">=</span><span class="dv">30</span>, scale<span class="op">=</span><span class="dv">5</span>)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>plt.plot(k, y)</span>
@@ -294,7 +291,7 @@ window.Quarto = {
 </div>
 </div>
 <p>-슬기로운 통계생활 ADP 반 수강생들의 통계점수를 평균내었다고 할 때, 이 값이 38점보다 높게 나올 확률을 구하세요.</p>
-<div id="5ab90b14" class="cell" data-execution_count="5">
+<div id="61de3a3f" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="dv">1</span><span class="op">-</span>norm.cdf(<span class="dv">38</span>, loc<span class="op">=</span><span class="dv">30</span>, scale<span class="op">=</span><span class="dv">5</span><span class="op">/</span>np.sqrt(<span class="dv">16</span>))</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(p)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -305,7 +302,7 @@ window.Quarto = {
 <section id="covid-19-발병률" class="level2">
 <h2 class="anchored" data-anchor-id="covid-19-발병률">Covid 19 발병률</h2>
 <p><strong>Covid‑19의 발병률은 1%라고 한다. 다음은 이번 코로나 사태로 인하여 코로나 의심 환자들 1,085명을 대상으로 슬통 회사의 “다잡아” 키트를 사용하여 양성 반응을 체크한 결과이다.</strong></p>
-<div id="d204dae8" class="cell" data-execution_count="6">
+<div id="c5b31580" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>pd.DataFrame({</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"키트\실제"</span>: [<span class="st">"양성"</span>, <span class="st">"음성"</span>],</span>
@@ -347,7 +344,7 @@ window.Quarto = {
 <ul>
 <li>다잡아 키트가 코로나 바이러스에 걸린 사람을 양성으로 잡아낼 확률을 계산하세요.</li>
 </ul>
-<div id="692ce823" class="cell" data-execution_count="7">
+<div id="e0c382e5" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># P(키트 양성|실제 양성)</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="dv">370</span> <span class="op">/</span> (<span class="dv">370</span> <span class="op">+</span> <span class="dv">15</span>)</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(p, <span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -370,7 +367,7 @@ P(\text{실제 양성} \mid \text{키트 양성}) &amp;= \frac{P(\text{키트 �
 {P(\text{실제 양성}) \cdot P(\text{키트 양성} \mid \text{실제 양성}) + P(\text{실제 음성}) \cdot P(\text{키트 양성} \mid \text{실제 음성})}
 \end{aligned}
 \]</span></p>
-<div id="3738c18b" class="cell" data-execution_count="8">
+<div id="60558be8" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> <span class="fl">0.01</span><span class="op">*</span>(<span class="dv">370</span><span class="op">/</span><span class="dv">385</span>) <span class="op">/</span> (<span class="fl">0.01</span><span class="op">*</span>(<span class="dv">370</span><span class="op">/</span><span class="dv">385</span>)<span class="op">+</span><span class="fl">0.99</span><span class="op">*</span>(<span class="dv">10</span><span class="op">/</span><span class="dv">700</span>))</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(p, <span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -383,7 +380,7 @@ P(\text{실제 양성} \mid \text{키트 양성}) &amp;= \frac{P(\text{키트 �
 <ul>
 <li>자유도가 4인 카이제곱분포의 확률밀도함수를 그려보세요.</li>
 </ul>
-<div id="f7cc7e84" class="cell" data-execution_count="9">
+<div id="4db708f3" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.stats <span class="im">import</span> chi2</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> np.linspace(<span class="dv">0</span>, <span class="dv">20</span>, <span class="dv">100</span>)</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> chi2.pdf(k, df<span class="op">=</span><span class="dv">4</span>)</span>
@@ -399,7 +396,7 @@ P(\text{실제 양성} \mid \text{키트 양성}) &amp;= \frac{P(\text{키트 �
 <ul>
 <li>다음의 확률을 구해보세요. 𝑃 (3 ≤ 𝑋 ≤ 5)</li>
 </ul>
-<div id="1f77b11b" class="cell" data-execution_count="10">
+<div id="1cfba6f3" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>p <span class="op">=</span> chi2.cdf(<span class="dv">5</span>, df<span class="op">=</span><span class="dv">4</span>) <span class="op">-</span> chi2.cdf(<span class="dv">3</span>, df<span class="op">=</span><span class="dv">4</span>)</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(p, <span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -409,7 +406,7 @@ P(\text{실제 양성} \mid \text{키트 양성}) &amp;= \frac{P(\text{키트 �
 <ul>
 <li>자유도가 4인 카이제곱분포에서 크기가 1000인 표본을 뽑은 후, 히스토그램을 그려보세요.</li>
 </ul>
-<div id="812cdb40" class="cell" data-execution_count="11">
+<div id="e4f2bdc4" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>np.random.seed(<span class="dv">20240902</span>)</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span>chi2.rvs(size<span class="op">=</span><span class="dv">1000</span>, df<span class="op">=</span><span class="dv">4</span>)</span>
@@ -425,7 +422,7 @@ P(\text{실제 양성} \mid \text{키트 양성}) &amp;= \frac{P(\text{키트 �
 <ul>
 <li>자유도가 4인 카이제곱분포를 따르는 확률변수에서 나올 수 있는 값 중 상위 5%에 해당하는 값은 얼마인지 계산해보세요.</li>
 </ul>
-<div id="9c5dd829" class="cell" data-execution_count="12">
+<div id="83dddf31" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> chi2.ppf(<span class="fl">0.95</span>, df<span class="op">=</span><span class="dv">4</span>)</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(x, <span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -435,7 +432,7 @@ P(\text{실제 양성} \mid \text{키트 양성}) &amp;= \frac{P(\text{키트 �
 <ul>
 <li>3번에서 뽑힌 표본값들 중 상위 5%에 위치한 표본의 값은 얼마인가요?</li>
 </ul>
-<div id="a470e348" class="cell" data-execution_count="13">
+<div id="56b2c585" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.percentile(x, <span class="dv">95</span>)</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">round</span>(x, <span class="dv">3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -445,14 +442,14 @@ P(\text{실제 양성} \mid \text{키트 양성}) &amp;= \frac{P(\text{키트 �
 <ul>
 <li>평균이 3, 표준편차가 2인 정규분포를 따르는 확률변수에서 크기가 20인 표본, x_1, …, x_20,을 뽑은 후 표본분산을 계산한 것을 s^2_1이라 생각해보죠. 다음을 수행해보세요!</li>
 </ul>
-<div id="f8b30235" class="cell" data-execution_count="14">
+<div id="9a09bfda" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 같은 방법으로 500개의 s^2 들, s^2_1,s^2_2,...,s^2_500 발생시킵니다.</span></span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>var<span class="op">=</span>[]</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">500</span>):</span>
 <span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span>norm.rvs(size<span class="op">=</span><span class="dv">20</span>, loc<span class="op">=</span><span class="dv">3</span>, scale<span class="op">=</span><span class="dv">2</span>)</span>
 <span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    var.append(np.var(x, ddof<span class="op">=</span><span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="0fdee58b" class="cell" data-execution_count="15">
+<div id="ca83ccc8" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 발생한 500개의 s^2 들 각각에 4.75를 곱하고, 그것들의 히스토그램을 그려보세요. (히스토그램을 그릴 때 probability = TRUE 옵션을 사용해서 그릴 것)</span></span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>a<span class="op">=</span>np.array(var)<span class="op">*</span><span class="fl">4.75</span></span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>sns.histplot(a, stat<span class="op">=</span><span class="st">'density'</span>)</span>

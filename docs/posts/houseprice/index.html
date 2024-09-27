@@ -9,7 +9,7 @@
 <meta name="author" content="Sanghoo Ahn">
 <meta name="dcterms.date" content="2024-09-27">
 
-<title>Kaggle: Houseprice – Sanghoo Ahn</title>
+<title>Kaggle: Houseprice -stacking – Sanghoo Ahn</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -150,7 +150,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Kaggle: Houseprice</h1>
+      <h1 class="title">Kaggle: Houseprice -stacking</h1>
                                 <div class="quarto-categories">
                 <div class="quarto-category">Machine Learning</div>
               </div>
@@ -206,7 +206,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="전처리" class="level2">
 <h2 class="anchored" data-anchor-id="전처리">전처리</h2>
-<div id="e5d3c68b" class="cell" data-execution_count="1">
+<div id="4c6e0594" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 필요한 패키지 불러오기</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -305,7 +305,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="모델-생성-및-예측" class="level2">
 <h2 class="anchored" data-anchor-id="모델-생성-및-예측">모델 생성 및 예측</h2>
-<div id="89f24a28" class="cell" data-execution_count="2">
+<div id="be5ea125" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 부스트 모델 생성</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> xgboost <span class="im">as</span> xgb</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> GridSearchCV</span>
@@ -384,7 +384,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="모델-성능" class="level2">
 <h2 class="anchored" data-anchor-id="모델-성능">모델 성능</h2>
-<div id="1b389f71" class="cell" data-execution_count="3">
+<div id="61183308" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 모델 성능 평가</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> mean_squared_error</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>train_y_pred <span class="op">=</span> blender_model.predict(train_x_stack)</span>
