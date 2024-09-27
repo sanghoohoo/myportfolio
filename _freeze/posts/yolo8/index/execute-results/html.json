@@ -1,0 +1,12 @@
+{
+  "hash": "ba36463eab13567bc092102cc4d975b3",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: \"YOLO8\"\nauthor: 'Sanghoo Ahn'\ndate: '2024-09-27'\ncategories: [Deeplearning]\njupyter: python3\n---\n\n::: {#a8b38552 .cell execution_count=1}\n``` {.python .cell-code}\nfrom ultralytics import YOLO\nimport matplotlib.pyplot as plt\n\n# 모델 불러오기 \nmodel = YOLO('yolov8n.pt')\n\n# 이미지에 대한 객체 감지 수행\nresults = model('pb.jpg')\n\n# 결과 시각화\nfor result in results:\n    result_img = result.plot()\n\n    # 이미지 배열을 Matplotlib을 통해 표시\n    plt.figure(figsize=(10, 10))\n    plt.imshow(result_img)\n    plt.axis('off')  # 축 숨기기\n    plt.show()\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n\nimage 1/1 C:\\Users\\USER\\Documents\\LS\\myportfolio\\posts\\yolo8\\pb.jpg: 640x480 12 persons, 1 bicycle, 2 dogs, 1 cow, 1 handbag, 78.6ms\nSpeed: 3.0ms preprocess, 78.6ms inference, 1.0ms postprocess per image at shape (1, 3, 640, 480)\n```\n:::\n\n::: {.cell-output .cell-output-display}\n![](index_files/figure-html/cell-2-output-2.png){width=574 height=758}\n:::\n:::\n\n\n<div id=\"disqus_thread\"></div>\n<script>\nvar disqus_config = function () {\n    this.page.url = window.location.href;  // 현재 페이지 URL\n    this.page.identifier = window.location.pathname; // 페이지 고유 식별자\n};\n\n(function() { // DON'T EDIT BELOW THIS LINE\n    var d = document, s = d.createElement('script');\n    s.src = 'https://sanghoohoo.disqus.com/embed.js';\n    s.setAttribute('data-timestamp', +new Date());\n    (d.head || d.body).appendChild(s);\n})();\n</script>\n<noscript>Please enable JavaScript to view the <a href=\"https://disqus.com/?ref_noscript\">comments powered by Disqus.</a></noscript>\n\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

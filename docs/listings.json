@@ -2,6 +2,7 @@
   {
     "listing": "/posts/index.html",
     "items": [
+      "/posts/yolo8/index.html",
       "/posts/hw7.1/index.html",
       "/posts/hw7/index.html",
       "/posts/Ames_project/project_rev4.html",
@@ -20,6 +21,7 @@
     "listing": "/lsbigdata_blog.html",
     "items": [
       "/posts/index.html",
+      "/posts/yolo8/index.html",
       "/posts/hw7.1/index.html",
       "/posts/hw7/index.html",
       "/posts/Ames_project/project_rev4.html",

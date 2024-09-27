@@ -1,0 +1,45 @@
+---
+title: "YOLO8"
+author: 'Sanghoo Ahn'
+date: '2024-09-27'
+categories: [Deeplearning]
+jupyter: python3
+---
+
+```{python}
+from ultralytics import YOLO
+import matplotlib.pyplot as plt
+
+# 모델 불러오기 
+model = YOLO('yolov8n.pt')
+
+# 이미지에 대한 객체 감지 수행
+results = model('pb.jpg')
+
+# 결과 시각화
+for result in results:
+    result_img = result.plot()
+
+    # 이미지 배열을 Matplotlib을 통해 표시
+    plt.figure(figsize=(10, 10))
+    plt.imshow(result_img)
+    plt.axis('off')  # 축 숨기기
+    plt.show()
+```
+
+
+<div id="disqus_thread"></div>
+<script>
+var disqus_config = function () {
+    this.page.url = window.location.href;  // 현재 페이지 URL
+    this.page.identifier = window.location.pathname; // 페이지 고유 식별자
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://sanghoohoo.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
