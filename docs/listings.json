@@ -2,6 +2,7 @@
   {
     "listing": "/posts/index.html",
     "items": [
+      "/posts/houseprice/index.html",
       "/posts/yolo8/index.html",
       "/posts/hw7.1/index.html",
       "/posts/hw7/index.html",
@@ -21,6 +22,7 @@
     "listing": "/lsbigdata_blog.html",
     "items": [
       "/posts/index.html",
+      "/posts/houseprice/index.html",
       "/posts/yolo8/index.html",
       "/posts/hw7.1/index.html",
       "/posts/hw7/index.html",
