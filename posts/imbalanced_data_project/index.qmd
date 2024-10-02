@@ -2,7 +2,7 @@
 title: "제조업 불균형 데이터 프로젝트"
 author: 'Sanghoo Ahn'
 date: '2024-10-02'
-categories: [Project]
+categories: [project]
 jupyter: python3
 ---
 
