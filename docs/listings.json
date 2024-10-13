@@ -9,6 +9,7 @@
     "listing": "/lsbigdata_blog.html",
     "items": [
       "/posts/index.html",
+      "/posts/power_usage_project/index.html",
       "/posts/imbalanced_data_project/index.html",
       "/posts/houseprice/index.html",
       "/posts/houseprice_nn/index.html",
@@ -30,6 +31,7 @@
   {
     "listing": "/posts/index.html",
     "items": [
+      "/posts/power_usage_project/index.html",
       "/posts/imbalanced_data_project/index.html",
       "/posts/houseprice/index.html",
       "/posts/houseprice_nn/index.html",
